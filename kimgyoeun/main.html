@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>justgram-main</title>
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main">
+    <header>
+      <div class="header_container">
+        <h1 class="logo">justgram</h1>
+        <div class="search">
+          <input class="search_keyword" type="text" placeholder="검색">
+        </div>
+
+        <ul class="menu">
+          <li class="ico_home"><a href="">Home</a></li>
+          <li class="ico_dm"><a href="">DM</a></li>
+          <li class="ico_upload"><a href="">Upload</a></li>
+          <li class="ico_search"><a href="">탐색</a></li>
+          <li class="ico_like"><a href="">Like</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <ul class="feed">
+      <li>
+        <div class="head">
+          <span class="user_profile">rupee_v_v</span>
+          <button type="button" class="btn_feed_action">
+            <!-- 게시물 추가 기능 -->
+          </button>
+          <!-- <ul class="menu_feed_action">
+            <li><button type="button">신고</button></li>
+            <li>공유하기</li>
+          </ul> -->
+        </div>
+
+        <div class="gallery">
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </div>
+
+        <div class="article_container">
+          <div class="actions">
+            <div>
+              <button type="button" class="like">좋아요</button>
+              <button type="button" class="comment">댓글</button>
+              <button type="button" class="share">공유하기</button>
+            </div>
+            <div>
+              <button type="button">북마크</button>
+            </div>
+          </div>
+
+          <p class="like_count">
+            <!-- b 태그: strong 과 동일한 '시각적'효과. '의미'는 다름. -->
+            <b>aineworld</b> 님 외 <b>10</b>명이 좋아합니다
+          </p>
+
+          <div class="article">
+            <dl>
+              <dt>canon_mj</dt>
+              <dd>
+                위워크에서 진행한 베이킹 클래스 입니다 쩌구쩌구저ㅓㅉ쩌거쩌구 만약 길면 더보기 생겨야함
+                <!-- text-overflow: ellipsis 이용해서 말줄임 표현. -->
+
+                <button type="button" class="more">더 보기</button>
+                <!-- 더보기 버튼은 우선 만든 뒤, 추후 js 로 show/hide 처리 -->
+              </dd>
+            </dl>
+
+            <ul class="hash_list">
+              <li><a href="">#맛집</a></li>
+            </ul>
+          </div>
+
+
+          <dl class="comment">
+            <div>
+              <dt>neceosecius</dt>
+              <dd>
+                <p>거봐 좋았잖아~~~~</p>
+                <button type="button" class="active">좋아요</button>
+              </dd>
+            </div>
+            <div>
+              <dt>kim</dt>
+              <dd>
+                <p>나도 데려가줘</p>
+                <button type="button">좋아요</button>
+              </dd>
+            </div>
+          </dl>
+
+        </div>
+      </li>
+    </ul>
+
+    <!-- <div class="feed">
+      <div class="feed_head">
+        <p class="user_id"></p>
+        <span class="feed_menu"></span>
+      </div>
+      <div class="feed_img"></div>
+      <div class="comment"></div>
+    </div> -->
+  </div>
+
+</body>
+
+</html>

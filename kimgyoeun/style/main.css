@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* width: 100%; */
+  margin: 0;
+  padding: 0;
+  background-color: rgb(238, 238, 238);
+}
+
+/* .main {
+   display: flex; 
+   width: 100%; 
+   margin: 0; 
+} */
+
+header {
+  padding: 15px 100px;
+  background-color: #fff;
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1280px;
+  margin: 0;
+  /* width: 100%; */
+}
+
+.logo {
+  margin: 0;
+  padding-left: 46px;
+  padding-right: 16px;
+  font-family: "Lobster", cursive, "sans-serif";
+  font-size: 30px;
+  background-image: url("../images/logoicon.png");
+  background-position: 0 8px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+}
+
+/* .search {
+  padding-top: 6px;
+  margin-left: 316px; 
+} */
+
+.search_keyword {
+  /* position: absolute; */
+  width: 250px;
+  height: 30px;
+  padding-left: 30px;
+  padding-right: 16px;
+  background-image: url("../images/searchicon.png");
+  background-repeat: no-repeat;
+  background-size: auto 70%;
+  background-position: 5px;
+  border: 1px solid #ccc;
+}
+
+/* .search img {
+  position: relative;
+  width: 18px;
+  padding-top: 7px;
+  padding-left: 3px;
+} */
+
+.menu {
+  display: flex;
+  /* justify-content: flex-end; */
+  /* padding-left: 560px; */
+}
+
+.menu {
+  display: flex;
+}
+.menu li a {
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 0 7px;
+  font-size: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* 메뉴별 아이콘 구분 */
+.menu li.ico_home a {
+  background-image: url("../images/homeicon.png");
+}
+.menu li.ico_dm a {
+  background-image: url("../images/dmicon.png");
+}
+.menu li.ico_upload a {
+  background-image: url("../images/uploadicon.png");
+}
+.menu li.ico_search a {
+  background-image: url("../images/questicon.png");
+}
+.menu li.ico_like a {
+  background-image: url("../images/likeicon.png");
+}
+/* 메뉴별 아이콘 - :hover (마우스 올렸을 때 아이콘 변경) */
+.menu li.ico_home a:hover,
+.menu li.ico_home a.active {
+  background-image: url("../images/homeblack.png");
+}
+.menu li.ico_dm a:hover,
+.menu li.ico_dm a.active {
+  background-image: url("../images/dmblack.png");
+  background-size: 28px;
+  background-repeat: no-repeat;
+}
+.menu li.ico_upload a:hover,
+.menu li.ico_upload a.active {
+  background-image: url("../images/uploadblack.png");
+}
+.menu li.ico_search a:hover,
+.menu li.ico_search a.active {
+  background-image: url("../images/iconsearchblack.png");
+}
+.menu li.ico_like a:hover,
+.menu li.ico_like a.active {
+  background-image: url("../images/likeblack.png");
+  background-size: 30px;
+}
+
+/*. menu img {
+  display: flex;
+  width: 36px;
+  padding: 15px 5px;
+} */
+
+.feed {
+  display: flex;
+  width: 400px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border: 2px solid rgba(146, 146, 146, 0.357);
+  border-radius: 8px;
+}
+
+.head {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+}
+
+.user_profile {
+  background-image: url("../images/루피.PNG");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: 50%;
+  border-radius: 100%;
+  /*정사각형이 아니라 직사각형일 경우 원 안에 보여지게 할 중심 이미지의 위치를 지정*/
+
+  width: 32px;
+  height: 32px;
+  padding-left: 32px;
+  padding-top: 8px;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+/* button {
+  all: unset;
+  margin: 0;
+  padding: 0;
+  appearance: none;
+} */
+
+.btn_feed_action {
+  background-image: url("../images/menu.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+}
