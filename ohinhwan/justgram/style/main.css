@@ -1,0 +1,106 @@
+#header {
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+img {
+  display: inline;
+}
+#title {
+  font-family: "Black Han Sans", sans-serif;
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+}
+
+#header input {
+  margin-top: 5px;
+  height: 30px;
+  background-color: #efefef;
+  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+  background-position: 30px left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+
+  padding: 5px 5px;
+  text-indent: 40px;
+
+  width: 400px;
+}
+
+#header input:focus {
+  background-image: none;
+  background-position: -10px center;
+  text-indent: 0;
+  width: 400px;
+}
+
+#icons img {
+  margin-top: 10px;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#feed {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid gray;
+}
+.header {
+  text-indent: 10px;
+  padding: 5px;
+  width: 470px;
+  vertical-align: middle;
+}
+.header .writer {
+  vertical-align: super;
+  font-weight: 1000;
+}
+.header img {
+  border-radius: 100%;
+}
+.menubar {
+  width: 470px;
+}
+#more {
+  float: right;
+}
+#menu-left {
+  float: left;
+}
+#menu-right {
+  float: right;
+}
+
+#count-like {
+  clear: both;
+  font-weight: 1000;
+}
+
+#count-like img {
+  border-radius: 100%;
+}
+
+#comment {
+  width: 420px;
+  margin-top: 12px;
+  height: 20px;
+}
+.commentButton {
+  background-color: white;
+  color: #b2dffc;
+  border: none;
+  border-radius: 5px;
+}
+
+.buttonActivate {
+  color: #0095f6;
+}
