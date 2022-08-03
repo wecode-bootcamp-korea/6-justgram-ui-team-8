@@ -1,0 +1,59 @@
+body {
+  background-color: beige;
+}
+div {
+  margin: auto;
+}
+.main-box {
+  width: 400px;
+  height: 100%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: white;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  padding: 10px;
+}
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 58px;
+}
+.login-wrapper {
+  border: 1px solid lightgray;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.login-input {
+  border: none;
+  width: 100%;
+  margin: 10px;
+  font-size: 16px;
+}
+.button-wrapper {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 10px;
+}
+.btn {
+  width: 100%;
+  color: white;
+  background-color: rgb(205, 233, 244);
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  cursor: not-allowed;
+}
+
+.foot-box {
+  padding-top: 100px;
+  padding-bottom: 15px;
+
+  color: rgb(48, 155, 232);
+}

@@ -1,0 +1,86 @@
+.header-box {
+  border-bottom: 1px solid lightgray;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.vertical {
+  display: flex;
+  align-items: center;
+}
+h1 {
+  font-size: 30px;
+}
+.search {
+  width: 250px;
+  height: 40px;
+
+  padding: 5px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: lightgrey;
+}
+.header-icon {
+  padding: 10px;
+  width: 300px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.feed-box {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+
+  height: vh 100;
+  width: 450px;
+  margin-top: 50px;
+  margin-left: 230px;
+}
+.feed-header {
+  margin-top: 3px;
+  margin-right: 5px;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.menu-box {
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  width: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.right {
+  margin-left: auto;
+}
+.comment-box {
+  padding: 0px 10px;
+}
+/* .like-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+} */
+.gray {
+  color: gray;
+}
+.a {
+  font-size: 13px;
+}
+.bold {
+  font-weight: bold;
+}
+.line {
+  border-top: 1px solid lightgray;
+  padding: 15px 0px;
+}
