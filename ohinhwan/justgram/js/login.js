@@ -6,7 +6,14 @@ inputId.addEventListener("keyup", validate);
 inputPw.addEventListener("keyup", validate);
 
 function validate() {
-  if (!(inputId.value && inputPw.value)) {
+  if (
+    !(
+      inputId.value &&
+      inputPw.value &&
+      inputId.value.includes("@") &&
+      inputPw.value.length >= 5
+    )
+  ) {
     button.disabled = true;
     button.classList.remove("buttonActivate");
   } else {
@@ -15,3 +22,7 @@ function validate() {
     button.classList.add("buttonActivate");
   }
 }
+
+// loginById.addEventListener("submit", (event) => {
+//   event.preventDefault();
+// });
