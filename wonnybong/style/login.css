@@ -28,39 +28,35 @@ body {
 
 ,
 .login-form {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .login-form input {
   width: 250px;
   height: 20px;
+  margin: 0 auto 6px auto;
+  padding: 9px 0 7px 8px;
   background-color: #fafafa;
   border: 1px solid #dbdbdb;
   border-radius: 5px;
-
-  margin: 0 auto 6px auto;
-  padding: 9px 0 7px 8px;
-
   font-size: 12px;
   cursor: text;
-
   outline: none;
 }
 
 .login-btn {
   width: 260px;
-  color: #fff;
+  margin: 12px auto 20px auto;
+  padding: 10px 0 9px 0;
   background-color: rgba(0, 149, 246, 0.3);
   border: none;
   border-radius: 5px;
-  margin: 12px auto 20px auto;
-  padding: 10px 0 9px 0;
-
   font-size: 13px;
   font-weight: 700;
+  color: #fff;
 }
 
 .abled {
@@ -72,6 +68,5 @@ body {
   margin: 100px 0 20px 0;
   color: #00376b;
   font-size: 12px;
-
   cursor: pointer;
 }
