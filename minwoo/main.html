@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Justgram</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header -->
+      <header class="header">
+        <div class="header_wrap">
+          <div class="inner">
+            <h1 class="logo">
+              <span>로고</span>
+              <a href="login.html" id="logoWord">
+                <img src="img/instagram.png" alt="main_logo" />
+                Justgram
+              </a>
+            </h1>
+            <div class="input_box">
+              <input type="text" placeholder="검색" id="search" />
+            </div>
+            <nav class="nav">
+              <ul class="link_list">
+                <li>
+                  <a href="">
+                    <img
+                      src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+                      width="30px"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img
+                      src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                      width="30px"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img
+                      src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+                      width="30px"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+      <!-- main -->
+      <div class="main">
+        <div class="container">
+          <!--피드 -->
+          <div class="contents_left">
+            <div class="inner">
+              <ul class="feeds_list">
+                <li class="feeds_list_li">
+                  <div class="feed_profile">
+                    <div class="profile">
+                      <img
+                        src="img/profile-img.jpg"
+                        alt="profile"
+                        class="profile_img"
+                      />
+                      <p class="profile_id">김민우</p>
+                    </div>
+                    <div class="profile_add link_list">
+                      <button type="button" class="state_btn">
+                        <img
+                          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/more.png"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="feed_box">
+                    <img src="img/seoul22.jpeg" alt="feed_img" />
+                  </div>
+                  <div class="feed_info">
+                    <div class="feed_state">
+                      <ul class="link_list">
+                        <li>
+                          <button type="button" class="state_btn">
+                            <img
+                              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png
+                                                    "
+                              alt="like_img"
+                            />
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="state_btn">
+                            <img
+                              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/comment.png"
+                              alt="comment_img"
+                            />
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="state_btn">
+                            <img
+                              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/share.png"
+                              alt="share_img"
+                            />
+                          </button>
+                        </li>
+                      </ul>
+                      <div class="link_list">
+                        <button type="button" class="state_btn">
+                          <img
+                            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/bookmark.png"
+                            alt="bookmark_img"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="feed_comments">
+                      <div class="feed_likes comments_margin">
+                        <div class="likes_user profile">
+                          <img
+                            src="img/profile-img.jpg"
+                            alt="profile"
+                            class="profile_img"
+                          />
+                        </div>
+                        <div class="comments_info">
+                          <p class="comments_tit">
+                            <span class="user_id">000</span>님
+                            <span
+                              >외 <span class="likes_number">10명</span></span
+                            >이 좋아합니다.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="comment_list comments_margin">
+                        <ul class="comments_info comment_list_ul">
+                          <li>
+                            <div class="comments_tit">
+                              <span class="user_id">김민우</span>
+                              <span class="comment_contents">서울에서...</span>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="feed_time">
+                          <p class="time">4시30분</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 댓글창 -->
+                  <form class="comments_form">
+                    <div class="input_box">
+                      <input
+                        type="text"
+                        placeholder="댓글달기..."
+                        id="comment_input"
+                      />
+                    </div>
+                    <div class="button_box">
+                      <button type="button" class="btn" disabled="disabled">
+                        <span class="">게시</span>
+                      </button>
+                    </div>
+                  </form>
+                  <!-- 댓글창 -->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //main -->
+    </div>
+  </body>
+</html>
