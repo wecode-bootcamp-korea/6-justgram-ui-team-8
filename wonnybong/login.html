@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/login.css" />
+    <script defer src="./js/login.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/insta_logo_color.png" />
+    <title>justgram</title>
+  </head>
+  <body>
+    <div class="container flex-center">
+      <div class="login-container">
+        <h1 class="login-title">justgram</h1>
+        <form class="login-form">
+          <input
+            id="uid"
+            type="text"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+          />
+          <input id="upw" type="password" placeholder="비밀번호" />
+          <button id="login-btn" class="login-btn" disabled>로그인</button>
+        </form>
+        <div class="flex-center">
+          <a class="find-pw" href="#">비밀번호를 잊으셨나요?</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

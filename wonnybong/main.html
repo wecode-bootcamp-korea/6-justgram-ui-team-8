@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <script defer src="./js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/insta_logo_color.png" />
+    <title>justgram</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#"><h2 class="title">justgram</h2></a>
+      <div class="search">
+        <div class="search-container">
+          <img src="./img/search_icon.png" alt="검색 아이콘" />
+          <input type="text" placeholder="검색" />
+        </div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="#">
+              <img
+                class="icon-setting"
+                alt="홈으로"
+                src="./img/home_icon.png"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                class="icon-setting"
+                alt="메세지"
+                src="./img/message_icon.png"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                class="icon-setting"
+                alt="게시글 작성"
+                src="./img/plus_icon.png"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                class="icon-setting"
+                alt="탐색"
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                class="icon-setting"
+                alt="소식"
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                class="icon-setting"
+                alt="프로필"
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+    <!-- main -->
+    <main class="main-setting">
+      <section class="feed">
+        <!-- feed id container -->
+        <div class="feed-id vertical-center">
+          <div class="vertical-center">
+            <a href="#">
+              <div class="profile-cur"></div>
+            </a>
+            <a href="#">
+              <span class="bold">2021bong</span>
+            </a>
+          </div>
+          <a href="#">
+            <img
+              class="feed-id-more"
+              src="./img/option.png"
+              alt="더보기 아이콘"
+            />
+          </a>
+        </div>
+        <!-- feed img container -->
+        <div class="feed-img-container">
+          <div class="feed-img">
+            <img src="./img/board_img.png" alt="게시글 이미지" />
+          </div>
+          <div class="feed-img-menu">
+            <ul class="vertical-center">
+              <div class="img-menu-group vertical-center">
+                <li>
+                  <a href="#">
+                    <img
+                      class="icon-setting"
+                      alt="좋아요"
+                      src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img class="icon-setting" alt="댓글" src="./img/chat.png" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      class="icon-setting"
+                      alt="공유"
+                      src="./img/message_icon.png"
+                    />
+                  </a>
+                </li>
+              </div>
+              <li>
+                <a href="#">
+                  <img
+                    class="icon-setting"
+                    alt="저장"
+                    src="./img/bookmark.png"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- feed content container -->
+        <div class="feed-cont">
+          <p class="bold">좋아요 56,782개</p>
+          <p>
+            <span class="bold mr5">2021Bong</span>공부 화이팅~<a
+              href="#"
+              class="feed-cont-more ml5"
+              >...더 보기</a
+            >
+          </p>
+          <a href="#" class="feed-cont-more">댓글 24개 모두 보기</a>
+          <p class="feed-cont-time">1시간 전</p>
+        </div>
+        <!-- feed comment container -->
+        <div class="feed-com vertical-center">
+          <div class="smile-icon"></div>
+          <form class="feed-com-form vertical-center">
+            <input
+              class="comment-input"
+              type="text"
+              placeholder="댓글 달기..."
+            />
+            <button type="submit" class="comment-btn" disabled>게시</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="feed">
+        <!-- feed id container -->
+        <div class="feed-id vertical-center">
+          <div class="vertical-center">
+            <a href="#">
+              <div class="profile-cur"></div>
+            </a>
+            <a href="#">
+              <span class="bold">2021bong</span>
+            </a>
+          </div>
+          <a href="#">
+            <img
+              class="feed-id-more"
+              src="./img/option.png"
+              alt="더보기 아이콘"
+            />
+          </a>
+        </div>
+        <!-- feed img container -->
+        <div class="feed-img-container">
+          <div class="feed-img">
+            <img src="./img/board_img.png" alt="게시글 이미지" />
+          </div>
+          <div class="feed-img-menu">
+            <ul class="vertical-center">
+              <div class="img-menu-group vertical-center">
+                <li>
+                  <a href="#">
+                    <img
+                      class="icon-setting"
+                      alt="좋아요"
+                      src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img class="icon-setting" alt="댓글" src="./img/chat.png" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      class="icon-setting"
+                      alt="공유"
+                      src="./img/message_icon.png"
+                    />
+                  </a>
+                </li>
+              </div>
+              <li>
+                <a href="#">
+                  <img
+                    class="icon-setting"
+                    alt="저장"
+                    src="./img/bookmark.png"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- feed content container -->
+        <div class="feed-cont">
+          <p class="bold">좋아요 56,782개</p>
+          <p>
+            <span class="bold mr5">2021Bong</span>공부 화이팅~<a
+              href="#"
+              class="feed-cont-more ml5"
+              >...더 보기</a
+            >
+          </p>
+          <a href="#" class="feed-cont-more">댓글 24개 모두 보기</a>
+          <p class="feed-cont-time">1시간 전</p>
+        </div>
+        <!-- feed comment container -->
+        <div class="feed-com vertical-center">
+          <div class="smile-icon"></div>
+          <form class="feed-com-form vertical-center">
+            <input
+              class="comment-input"
+              type="text"
+              placeholder="댓글 달기..."
+            />
+            <button type="submit" class="comment-btn" disabled>게시</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="feed">
+        <!-- feed id container -->
+        <div class="feed-id vertical-center">
+          <div class="vertical-center">
+            <a href="#">
+              <div class="profile-cur"></div>
+            </a>
+            <a href="#">
+              <span class="bold">2021bong</span>
+            </a>
+          </div>
+          <a href="#">
+            <img
+              class="feed-id-more"
+              src="./img/option.png"
+              alt="더보기 아이콘"
+            />
+          </a>
+        </div>
+        <!-- feed img container -->
+        <div class="feed-img-container">
+          <div class="feed-img">
+            <img src="./img/board_img.png" alt="게시글 이미지" />
+          </div>
+          <div class="feed-img-menu">
+            <ul class="vertical-center">
+              <div class="img-menu-group vertical-center">
+                <li>
+                  <a href="#">
+                    <img
+                      class="icon-setting"
+                      alt="좋아요"
+                      src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img class="icon-setting" alt="댓글" src="./img/chat.png" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      class="icon-setting"
+                      alt="공유"
+                      src="./img/message_icon.png"
+                    />
+                  </a>
+                </li>
+              </div>
+              <li>
+                <a href="#">
+                  <img
+                    class="icon-setting"
+                    alt="저장"
+                    src="./img/bookmark.png"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- feed content container -->
+        <div class="feed-cont">
+          <p class="bold">좋아요 56,782개</p>
+          <p>
+            <span class="bold mr5">2021Bong</span>공부 화이팅~<a
+              href="#"
+              class="feed-cont-more ml5"
+              >...더 보기</a
+            >
+          </p>
+          <a href="#" class="feed-cont-more">댓글 24개 모두 보기</a>
+          <p class="feed-cont-time">1시간 전</p>
+        </div>
+        <!-- feed comment container -->
+        <div class="feed-com vertical-center">
+          <div class="smile-icon"></div>
+          <form class="feed-com-form vertical-center">
+            <input
+              class="comment-input"
+              type="text"
+              placeholder="댓글 달기..."
+            />
+            <button type="submit" class="comment-btn" disabled>게시</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- //main -->
+  </body>
+</html>
