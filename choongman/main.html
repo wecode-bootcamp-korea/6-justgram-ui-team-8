@@ -4,37 +4,128 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JUSTGRAM</title>
+    <title>JUSTGRAM MAIN</title>
     <script src="https://use.fontawesome.com/releases/v6.1.2/js/all.js"></script>
+    <link rel="stylesheet" href="./style/common.css" />
+    <link rel="stylesheet" href="./style/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <!--nav(header) 시작-->
     <nav class="fixedHead">
       <div class="navLeft">
-        <div class="logo"><i class="fa-brands fa-instagram"></i></div>
-        <span class="titleName">JUSTGRAM</span>
+        <div class="logo">
+          <i class="fa-brands fa-instagram instaLogo"></i>
+          <div class="stick"></div>
+          <div class="logoText">Justgram</div>
+        </div>
       </div>
       <div class="navCenter">
         <div class="searchBar">
-          <div class="search-icon"></div>
           <input class="search" type="text" placeholder="검색" />
         </div>
       </div>
       <div class="navRight">
-        <img
-          class="findPeople"
-          scr="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-        />
-        <img
-          class="emptyHeart"
-          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-        />
-        <img
-          class="myProfile"
-          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-        />
+        <a href="#">
+          <img
+            class="explore icon-image"
+            alt="탐색"
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+          />
+          <a href="#">
+            <img
+              class="emptyHeart icon-image"
+              alt="소식"
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+            />
+          </a>
+          <a href="#">
+            <img
+              class="myProfile icon-image"
+              alt="프로필"
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+            />
+          </a>
       </div>
     </nav>
+    <!--nav(header) 끝-->
+
+
+    <main class="contents">
+      <!--feed#1 시작-->
+      <section class="feed_1">
+        <header class="feedHeader">
+          <div class="myId">
+            <img class="me" alt="프로필사진" src="./img/me.JPG" width="30px" height="30px" />
+            <div class="keemteem">keem_teem</div>
+            <div class="dots"> 
+              <img alt="더보기" src="./img/more.png"  width="20px" height="20px" />
+            </div>
+          </div>
+        </header>
+        <div class="feedCenter">
+        <img alt="feedContent" class="feedImg" src="./img/feed_img.jpg" />
+        </div>
+        <div class="icons" >
+          <div class="iconsLeft">
+            <a href="#">
+              <img alt="fullHeart" src="./img/heart.png" width="22px" height="22px" />
+            </a>
+            <a href="#">
+              <img alt="chat" src="./img/chat.png" width="22px" height="22px" />
+            </a>
+            <a href="#">
+              <img alt="upload" src="./img/upload.png" width="22px" height="22px" />
+            </a>
+          </div>
+          <div class="iconsRight">
+            <a href="#">
+              <img alt="save" src="./img/save-instagram.png" width="22px" height="22px" />
+            </a>
+          </div>
+        </div>
+        <div class="likes">
+          <div class="follower">
+            <img alt="friend" class="profileImg" src="./img/follower.jpg" width="15px" height="15px" />
+          </div>
+          <div class="likeComment">
+            <span class="bold">Leonid Shaydulin</span>님 <span class="bold">외 10명</span>이 좋아합니다
+          </div>
+        </div>
+        <div class="comments">
+          <div class="comments-1">
+            <span class="bold">moonbdns</span> 
+            <span>아~ 이 날 너무 재밋었지 그 때 그...</span>
+            <span class="softly">더 보기</span>
+          </div>
+          <div class="comments-2">
+            <div>
+              <span class="bold">dbqudwo333</span> 
+              <span>날씨 뭐야 미쳤다!! </span>
+            </div>
+            <div class="likeImg">
+              <span>
+                <img class="commentLike" alt="좋아요" src="./img/thinemptyheart.png" width="12px" height="12px"/>
+              </span>
+            </div>
+          </div>
+          <div class="time">
+            10초 전
+          </div>
+        </div>
+        <div class="commentBox">
+          <div class="writeComment">
+            댓글 달기...
+          </div>
+          <div class="posting">
+            게시
+          </div>
+        </div>
+      </section>
+      <!--feed#1 끝-->
+    </main>
   </body>
 </html>
