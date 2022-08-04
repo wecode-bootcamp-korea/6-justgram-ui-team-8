@@ -75,13 +75,8 @@ header {
 
 .menu {
   display: flex;
-  /* justify-content: flex-end; */
-  /* padding-left: 560px; */
 }
 
-.menu {
-  display: flex;
-}
 .menu li a {
   display: block;
   width: 26px;
@@ -145,13 +140,14 @@ header {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  border: 2px solid rgba(146, 146, 146, 0.357);
+  border: 1px solid rgba(146, 146, 146, 0.357);
   border-radius: 8px;
 }
 
 .head {
   display: flex;
   padding: 8px;
+  max-width: 400px;
   justify-content: space-between;
 }
 
@@ -171,15 +167,219 @@ header {
   font-size: 14px;
 }
 
-/* button {
+button {
   all: unset;
-  margin: 0;
-  padding: 0;
-  appearance: none;
-} */
+}
 
 .btn_feed_action {
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  font-size: 0;
   background-image: url("../images/menu.png");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 30px;
 }
+
+.gallery {
+  width: 398px;
+  height: 398px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  /* max-height: 398px; */
+  object-fit: cover;
+}
+
+.like {
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
+  font-size: 0;
+  background-image: url("../images/likeicon.png");
+  background-size: 24px;
+  background-repeat: no-repeat;
+}
+
+.actions {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+
+.comment_button {
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
+  font-size: 0;
+  background-image: url("../images/commenticon.png");
+  background-size: 24px;
+  background-repeat: no-repeat;
+}
+
+.dm {
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
+  font-size: 0;
+  background-image: url("../images/dmicon.png");
+  background-size: 24px;
+  background-repeat: no-repeat;
+}
+
+.bookmark {
+  width: 26px;
+  height: 26px;
+  font-size: 0;
+  padding-right: 5px;
+  background-image: url("../images/bookmarkicon.png");
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+.like_count {
+  margin: 0;
+  padding: 0 8px;
+}
+
+.like_count img,
+.like_count_text {
+  /* img, span(like_count_text) = box model: Inline. 
+    인라인 요소의 특성 : 한줄 (Row) 에 나란히 배치된다.
+    나란히 배치될 때! 세로 가운데 정렬을 '인라인'요소끼리 어떻게 정렬될지를 정해주는 속성은 ?
+    단!!!! block + inline || block + block 박스모델 간 정렬에는 통하지 않음!!!
+    = vertical-align: [value]
+
+    인라인 요소)
+    a, span, img, button, input, textarea, ... i, b, address, ... 상당히 많음
+    [ https://www.w3schools.com/html/html_blocks.asp ]
+  */
+  vertical-align: middle;
+}
+
+.like_count img {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+
+.like_count .like_count_text {
+  padding-left: 5px;
+  /* margin-bottom: 10px; */
+  /* margin-bottom: 5px; */
+  font-size: 14px;
+}
+
+.article dl {
+  display: flex;
+}
+
+.article dt {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.article dl dd {
+  width: 241px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  padding-left: 8px;
+  padding-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.more {
+  float: right;
+  font-size: 14px;
+  color: rgb(171, 171, 171);
+  /* padding-left: 20px; */
+}
+
+.article a {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.comment div {
+  overflow: hidden;
+  padding: 5px 0;
+}
+
+.comment dt {
+  /*
+    float 속성을 주면 'inline' 요소도 자동으로 'block' 요소로 변환된다.
+    '이후'에 위치하는 모든 HTML 요소는, 마찬가지로 'float'. 즉. '붕 뜬' 상태가 됨.
+  */
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.comment p {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 0 8px;
+  /* text-overflow: ellipsis;
+  white-space: nowrap; */
+}
+
+.comment button {
+  position: relative;
+  float: right;
+  width: 10px;
+  height: 10px;
+  font-size: 0;
+  /* padding-right: 5px; */
+  background-image: url("../images/likeicon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.comment button.active {
+  background-color: red;
+}
+
+.comment-write {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+}
+
+.write {
+  flex: 1;
+  /* width: 100%; */
+  padding-left: 8px;
+  border-top: 1px solid rgba(146, 146, 146, 0.357);
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.write-button {
+  font-size: 14px;
+  padding-right: 8px;
+  border-top: 1px solid rgba(146, 146, 146, 0.357);
+  color: rgb(85, 125, 187);
+  font-weight: bolder;
+}
+
+/* 코맨트, 라이크, 와이트 */
+/* 반복되는건 따로 빼서 만든 후 에이치티엠엘에 클라스 네임 옆에 
+띄어쓰기 후 추가 */
+/* 댓글달기 -> 인풋과 게시가 있어야함 */
+/* -> 와이트 디스플레이 플랙스, 플랙스 디랙션 로우,
+코맨트 인풋 플랙스 1, 이러면 쭈욱 늘어나서 창을 줄여도 여백만큼 차지함*/
+/* 에드, 커밋 추가 후 푸쉬 하면 원격저장됨 깃로그로 확인 */
+/* flex-direction: row; */
