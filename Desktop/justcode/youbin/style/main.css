@@ -9,8 +9,10 @@
   display: flex;
   align-items: center;
 }
-h1 {
-  font-size: 30px;
+.title {
+  margin-left: 10px;
+  font-family: "Lobster", cursive;
+  font-size: 25px;
 }
 .search {
   width: 250px;
@@ -40,6 +42,7 @@ h1 {
   margin-top: 50px;
   margin-left: 230px;
 }
+
 .feed-header {
   margin-top: 3px;
   margin-right: 5px;
@@ -48,6 +51,12 @@ h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.feed-left {
+  width: 120px;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
 }
 .menu-box {
   padding: 3px;
@@ -66,17 +75,13 @@ h1 {
 .comment-box {
   padding: 0px 10px;
 }
-/* .like-count {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-} */
 .gray {
   color: gray;
 }
 .a {
   font-size: 13px;
 }
+
 .bold {
   font-weight: bold;
 }
