@@ -1,0 +1,115 @@
+.header-box {
+  border-bottom: 1px solid lightgray;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.vertical {
+  display: flex;
+  align-items: center;
+}
+.title {
+  margin-left: 10px;
+  font-family: "Lobster", cursive;
+  font-size: 12px;
+}
+.search {
+  width: 250px;
+  height: 35px;
+
+  padding: 5px;
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 15px;
+  text-align: center;
+
+  background-color: lightgrey;
+}
+.header-icon {
+  width: 300px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.feed-box {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+
+  height: vh 100;
+  width: 450px;
+  margin-top: 50px;
+  margin-left: 230px;
+}
+
+.feed-header {
+  margin-top: 3px;
+  margin-right: 5px;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.feed-left {
+  width: 120px;
+
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+.menu-box {
+  padding: 3px;
+
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  width: 120px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.right {
+  margin-left: auto;
+}
+.comment-box {
+  padding: 0px 10px;
+}
+.feedfeed {
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+.gray {
+  color: gray;
+}
+.a {
+  font-size: 13px;
+}
+.bold {
+  font-weight: bold;
+}
+.line {
+  border-top: 1px solid lightgray;
+
+  padding: 10px 0px;
+}
+.comment-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment-btn {
+  border: none;
+
+  background-color: transparent;
+
+  color: skyblue;
+  font-size: 17px;
+}
