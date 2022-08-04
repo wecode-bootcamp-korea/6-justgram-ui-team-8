@@ -151,10 +151,15 @@ body {
 }
 
 /* feed content container */
-.feed-cont {
+.feed-cont-container {
   padding: 0 10px;
   background-color: #fff;
   font-size: 14px;
+}
+
+.feed-cont {
+  display: flex;
+  align-items: center;
 }
 
 .mr5 {

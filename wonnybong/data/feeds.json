@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "userName": "2021bong",
+    "imageSrc": "./img/board_img.png",
+    "likeCount": 123,
+    "content": "공부화이팅~~😀😀😀",
+    "allComment": 3,
+    "createdTime": 1
+  },
+  {
+    "id": 2,
+    "userName": "justcode_bong",
+    "imageSrc": "./img/board2_img.jpg",
+    "likeCount": 1127482,
+    "content": "강아지 마루 보시나요?",
+    "allComment": 322,
+    "createdTime": 13
+  },
+  {
+    "id": 3,
+    "userName": "tomato2022",
+    "imageSrc": "./img/board3_img.png",
+    "likeCount": 1,
+    "content": "울퉁불퉁 멋진 몸매에 빨간 옷을 입고",
+    "allComment": 11,
+    "createdTime": 24
+  }
+]
