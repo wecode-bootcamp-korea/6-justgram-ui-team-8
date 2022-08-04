@@ -247,16 +247,6 @@ button {
 
 .like_count img,
 .like_count_text {
-  /* img, span(like_count_text) = box model: Inline. 
-    인라인 요소의 특성 : 한줄 (Row) 에 나란히 배치된다.
-    나란히 배치될 때! 세로 가운데 정렬을 '인라인'요소끼리 어떻게 정렬될지를 정해주는 속성은 ?
-    단!!!! block + inline || block + block 박스모델 간 정렬에는 통하지 않음!!!
-    = vertical-align: [value]
-
-    인라인 요소)
-    a, span, img, button, input, textarea, ... i, b, address, ... 상당히 많음
-    [ https://www.w3schools.com/html/html_blocks.asp ]
-  */
   vertical-align: middle;
 }
 
@@ -315,10 +305,6 @@ button {
 }
 
 .comment dt {
-  /*
-    float 속성을 주면 'inline' 요소도 자동으로 'block' 요소로 변환된다.
-    '이후'에 위치하는 모든 HTML 요소는, 마찬가지로 'float'. 즉. '붕 뜬' 상태가 됨.
-  */
   float: left;
   padding-left: 8px;
   padding-right: 8px;
@@ -374,12 +360,3 @@ button {
   color: rgb(85, 125, 187);
   font-weight: bolder;
 }
-
-/* 코맨트, 라이크, 와이트 */
-/* 반복되는건 따로 빼서 만든 후 에이치티엠엘에 클라스 네임 옆에 
-띄어쓰기 후 추가 */
-/* 댓글달기 -> 인풋과 게시가 있어야함 */
-/* -> 와이트 디스플레이 플랙스, 플랙스 디랙션 로우,
-코맨트 인풋 플랙스 1, 이러면 쭈욱 늘어나서 창을 줄여도 여백만큼 차지함*/
-/* 에드, 커밋 추가 후 푸쉬 하면 원격저장됨 깃로그로 확인 */
-/* flex-direction: row; */
