@@ -2,11 +2,6 @@ body {
   background-color: #fafafa;
 }
 
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .container {
   height: 100vh;
 }
@@ -59,14 +54,14 @@ body {
   color: #fff;
 }
 
-.abled {
-  background-color: #1c95f6;
-}
-
 .find-pw {
   display: block;
   margin: 100px 0 20px 0;
   color: #00376b;
   font-size: 12px;
   cursor: pointer;
+}
+
+.abled {
+  background-color: #1c95f6;
 }

@@ -86,12 +86,6 @@ body {
   top: 70px;
 }
 
-.vertical-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 /* main */
 .feed {
   width: 472px;
@@ -103,10 +97,6 @@ body {
 }
 
 /* feed id container */
-.bold {
-  font-weight: bold;
-  font-size: 14px;
-}
 
 .feed-id {
   height: 55px;
@@ -160,14 +150,6 @@ body {
 .feed-cont {
   display: flex;
   align-items: center;
-}
-
-.mr5 {
-  margin-right: 5px;
-}
-
-.ml5 {
-  margin-left: 5px;
 }
 
 .feed-cont-com {

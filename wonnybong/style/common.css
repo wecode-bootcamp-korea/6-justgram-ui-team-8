@@ -1,0 +1,24 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
