@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>justgram-main</title>
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main">
+    <header>
+      <div class="header_container">
+        <h1 class="logo">justgram</h1>
+        <div class="search">
+          <input class="search_keyword" type="text" placeholder="검색">
+        </div>
+
+        <ul class="menu">
+          <li class="ico_home"><a href="">Home</a></li>
+          <li class="ico_dm"><a href="">DM</a></li>
+          <li class="ico_upload"><a href="">Upload</a></li>
+          <li class="ico_search"><a href="">탐색</a></li>
+          <li class="ico_like"><a href="">Like</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <ul class="feed">
+      <li>
+        <div class="head">
+          <span class="user_profile">rupee_v_v</span>
+          <button type="button" class="btn_feed_action">
+            게시물 추가 기능
+          </button>
+          <!-- <ul class="menu_feed_action">
+            <li><button type="button">신고</button></li>
+            <li>공유하기</li>
+          </ul> -->
+        </div>
+
+        <div class="gallery">
+          <!-- <img src="./images/루피.png" alt="루피 하품하는 모습" /> -->
+          <img src="./images/루피.png" alt="루피 산책하는 모습" />
+          <!-- <img src="./images/루피3.png" alt="루피 웃는 모습" /> -->
+        </div>
+
+        <div class="article_container">
+          <div class="actions">
+            <div>
+              <button type="button" class="like">좋아요</button>
+              <button type="button" class="comment_button">댓글</button>
+              <button type="button" class="dm">DM</button>
+            </div>
+            <div>
+              <button type="button" class="bookmark">북마크</button>
+            </div>
+          </div>
+
+          <p class="like_count">
+            <!-- b 태그: strong 과 동일한 '시각적'효과. '의미'는 다름. -->
+            <img src="./images/루피2.png" alt="프로필 사진">
+            <span class="like_count_text">
+              <b>aineworld</b> 님 외 <b>10</b>명이 좋아합니다
+            </span>
+          </p>
+
+          <div class="article">
+            <dl>
+              <dt>rupee_v_v</dt>
+              <dd class="article">
+                세상에서 제일 귀여운 우리 루피 그 어떤 댕댕이도 따라잡지 못할 미모 부드럽고 복실복실 하얀 털..💚
+                <!-- text-overflow: ellipsis 이용해서 말줄임 표현. -->
+                <a href="">#댕댕이</a>
+                <!-- 더보기 버튼은 우선 만든 뒤, 추후 js 로 show/hide 처리 -->
+                <!-- </dd>
+              <dd> -->
+              </dd>
+              <button type="button" class="more">더 보기</button>
+            </dl>
+          </div>
+
+
+          <dl class="comment"></dl>
+
+          <div class="comment-write">
+            <input class="write" type="text" placeholder="댓글달기...">
+            <button class="write-button" type="button">게시</button>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+    <ul class="feed">
+      <li>
+        <div class="head">
+          <span class="user_profile">rupee_v_v</span>
+          <button type="button" class="btn_feed_action">
+            게시물 추가 기능
+          </button>
+          <!-- <ul class="menu_feed_action">
+            <li><button type="button">신고</button></li>
+            <li>공유하기</li>
+          </ul> -->
+        </div>
+
+        <div class="gallery">
+          <!-- <img src="./images/루피.png" alt="루피 하품하는 모습" /> -->
+          <img src="./images/루피3.png" alt="루피 산책하는 모습" />
+          <!-- <img src="./images/루피3.png" alt="루피 웃는 모습" /> -->
+        </div>
+
+        <div class="article_container">
+          <div class="actions">
+            <div>
+              <button type="button" class="like">좋아요</button>
+              <button type="button" class="comment_button">댓글</button>
+              <button type="button" class="dm">DM</button>
+            </div>
+            <div>
+              <button type="button" class="bookmark">북마크</button>
+            </div>
+          </div>
+
+          <p class="like_count">
+            <!-- b 태그: strong 과 동일한 '시각적'효과. '의미'는 다름. -->
+            <img src="./images/루피2.png" alt="프로필 사진">
+            <span class="like_count_text">
+              <b>aineworld</b> 님 외 <b>10</b>명이 좋아합니다
+            </span>
+          </p>
+
+          <div class="article">
+            <dl>
+              <dt>rupee_v_v</dt>
+              <dd class="article">
+                세상에서 제일 귀여운 우리 루피 그 어떤 댕댕이도 따라잡지 못할 미모 부드럽고 복실복실 하얀 털..💚
+                <!-- text-overflow: ellipsis 이용해서 말줄임 표현. -->
+                <a href="">#댕댕이</a>
+                <!-- 더보기 버튼은 우선 만든 뒤, 추후 js 로 show/hide 처리 -->
+                <!-- </dd>
+              <dd> -->
+              </dd>
+              <button type="button" class="more">더 보기</button>
+            </dl>
+          </div>
+
+
+          <dl class="comment"></dl>
+
+          <div class="comment-write">
+            <input class="write" type="text" placeholder="댓글달기...">
+            <button class="write-button" type="button">게시</button>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+    <ul class="feed">
+      <li>
+        <div class="head">
+          <span class="user_profile">rupee_v_v</span>
+          <button type="button" class="btn_feed_action">
+            게시물 추가 기능
+          </button>
+          <!-- <ul class="menu_feed_action">
+            <li><button type="button">신고</button></li>
+            <li>공유하기</li>
+          </ul> -->
+        </div>
+
+        <div class="gallery">
+          <!-- <img src="./images/루피.png" alt="루피 하품하는 모습" /> -->
+          <img src="./images/루피2.png" alt="루피 산책하는 모습" />
+          <!-- <img src="./images/루피3.png" alt="루피 웃는 모습" /> -->
+        </div>
+
+        <div class="article_container">
+          <div class="actions">
+            <div>
+              <button type="button" class="like">좋아요</button>
+              <button type="button" class="comment_button">댓글</button>
+              <button type="button" class="dm">DM</button>
+            </div>
+            <div>
+              <button type="button" class="bookmark">북마크</button>
+            </div>
+          </div>
+
+          <p class="like_count">
+            <!-- b 태그: strong 과 동일한 '시각적'효과. '의미'는 다름. -->
+            <img src="./images/루피2.png" alt="프로필 사진">
+            <span class="like_count_text">
+              <b>aineworld</b> 님 외 <b>10</b>명이 좋아합니다
+            </span>
+          </p>
+
+          <div class="article">
+            <dl>
+              <dt>rupee_v_v</dt>
+              <dd class="article">
+                세상에서 제일 귀여운 우리 루피 그 어떤 댕댕이도 따라잡지 못할 미모 부드럽고 복실복실 하얀 털..💚
+                <!-- text-overflow: ellipsis 이용해서 말줄임 표현. -->
+                <a href="">#댕댕이</a>
+                <!-- 더보기 버튼은 우선 만든 뒤, 추후 js 로 show/hide 처리 -->
+                <!-- </dd>
+              <dd> -->
+              </dd>
+              <button type="button" class="more">더 보기</button>
+            </dl>
+          </div>
+
+
+          <dl class="comment"></dl>
+
+          <div class="comment-write">
+            <input class="write" type="text" placeholder="댓글달기...">
+            <button class="write-button" type="button">게시</button>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script src="./js/main.js"></script>
+  <!-- <script></script> -->
+
+</body>
+
+</html>

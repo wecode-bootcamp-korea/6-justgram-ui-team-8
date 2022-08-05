@@ -1,0 +1,362 @@
+* {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* width: 100%; */
+  margin: 0;
+  padding: 0;
+  background-color: rgb(238, 238, 238);
+}
+
+/* .main {
+   display: flex; 
+   width: 100%; 
+   margin: 0; 
+} */
+
+header {
+  padding: 15px 100px;
+  background-color: #fff;
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1280px;
+  margin: 0;
+  /* width: 100%; */
+}
+
+.logo {
+  margin: 0;
+  padding-left: 46px;
+  padding-right: 16px;
+  font-family: "Lobster", cursive, "sans-serif";
+  font-size: 30px;
+  background-image: url("../images/logoicon.png");
+  background-position: 0 8px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+}
+
+/* .search {
+  padding-top: 6px;
+  margin-left: 316px; 
+} */
+
+.search_keyword {
+  /* position: absolute; */
+  width: 250px;
+  height: 30px;
+  padding-left: 30px;
+  padding-right: 16px;
+  background-image: url("../images/searchicon.png");
+  background-repeat: no-repeat;
+  background-size: auto 70%;
+  background-position: 5px;
+  border: 1px solid #ccc;
+}
+
+/* .search img {
+  position: relative;
+  width: 18px;
+  padding-top: 7px;
+  padding-left: 3px;
+} */
+
+.menu {
+  display: flex;
+}
+
+.menu li a {
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 0 7px;
+  font-size: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* 메뉴별 아이콘 구분 */
+.menu li.ico_home a {
+  background-image: url("../images/homeicon.png");
+}
+.menu li.ico_dm a {
+  background-image: url("../images/dmicon.png");
+}
+.menu li.ico_upload a {
+  background-image: url("../images/uploadicon.png");
+}
+.menu li.ico_search a {
+  background-image: url("../images/questicon.png");
+}
+.menu li.ico_like a {
+  background-image: url("../images/likeicon.png");
+}
+/* 메뉴별 아이콘 - :hover (마우스 올렸을 때 아이콘 변경) */
+.menu li.ico_home a:hover,
+.menu li.ico_home a.active {
+  background-image: url("../images/homeblack.png");
+}
+.menu li.ico_dm a:hover,
+.menu li.ico_dm a.active {
+  background-image: url("../images/dmblack.png");
+  background-size: 28px;
+  background-repeat: no-repeat;
+}
+.menu li.ico_upload a:hover,
+.menu li.ico_upload a.active {
+  background-image: url("../images/uploadblack.png");
+}
+.menu li.ico_search a:hover,
+.menu li.ico_search a.active {
+  background-image: url("../images/iconsearchblack.png");
+}
+.menu li.ico_like a:hover,
+.menu li.ico_like a.active {
+  background-image: url("../images/likeblack.png");
+  background-size: 30px;
+}
+
+/*. menu img {
+  display: flex;
+  width: 36px;
+  padding: 15px 5px;
+} */
+
+.feed {
+  display: flex;
+  width: 400px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border: 1px solid rgba(146, 146, 146, 0.357);
+  border-radius: 8px;
+}
+
+.head {
+  display: flex;
+  padding: 8px;
+  max-width: 400px;
+  justify-content: space-between;
+}
+
+.user_profile {
+  background-image: url("../images/루피.PNG");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: 50%;
+  border-radius: 100%;
+  /*정사각형이 아니라 직사각형일 경우 원 안에 보여지게 할 중심 이미지의 위치를 지정*/
+
+  width: 32px;
+  height: 32px;
+  padding-left: 32px;
+  padding-top: 8px;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+button {
+  all: unset;
+}
+
+.btn_feed_action {
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  font-size: 0;
+  background-image: url("../images/menu.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gallery {
+  width: 398px;
+  height: 398px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  /* max-height: 398px; */
+  object-fit: cover;
+}
+
+.like {
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
+  font-size: 0;
+  background-image: url("../images/likeicon.png");
+  background-size: 24px;
+  background-repeat: no-repeat;
+}
+
+.actions {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+
+.comment_button {
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
+  font-size: 0;
+  background-image: url("../images/commenticon.png");
+  background-size: 24px;
+  background-repeat: no-repeat;
+}
+
+.dm {
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
+  font-size: 0;
+  background-image: url("../images/dmicon.png");
+  background-size: 24px;
+  background-repeat: no-repeat;
+}
+
+.bookmark {
+  width: 26px;
+  height: 26px;
+  font-size: 0;
+  padding-right: 5px;
+  background-image: url("../images/bookmarkicon.png");
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+.like_count {
+  margin: 0;
+  padding: 0 8px;
+}
+
+.like_count img,
+.like_count_text {
+  vertical-align: middle;
+}
+
+.like_count img {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+
+.like_count .like_count_text {
+  padding-left: 5px;
+  /* margin-bottom: 10px; */
+  /* margin-bottom: 5px; */
+  font-size: 14px;
+}
+
+.article dl {
+  display: flex;
+}
+
+.article dt {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.article dl dd {
+  width: 241px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  padding-left: 8px;
+  padding-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.more {
+  float: right;
+  font-size: 14px;
+  color: rgb(171, 171, 171);
+  /* padding-left: 20px; */
+}
+
+.article a {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.comment div {
+  overflow: hidden;
+  padding: 5px 0;
+}
+
+.comment dt {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.comment p {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 0 8px;
+  /* text-overflow: ellipsis;
+  white-space: nowrap; */
+}
+
+.comment button {
+  position: relative;
+  float: right;
+  width: 10px;
+  height: 10px;
+  font-size: 0;
+  /* padding-right: 5px; */
+  background-image: url("../images/likeicon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.comment button.active {
+  background-color: red;
+}
+
+.comment-write {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+}
+
+.write {
+  flex: 1;
+  /* width: 100%; */
+  padding-left: 8px;
+  border-top: 1px solid rgba(146, 146, 146, 0.357);
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.write-button {
+  font-size: 14px;
+  padding-right: 8px;
+  border-top: 1px solid rgba(146, 146, 146, 0.357);
+  color: rgb(85, 125, 187);
+  font-weight: bolder;
+}
