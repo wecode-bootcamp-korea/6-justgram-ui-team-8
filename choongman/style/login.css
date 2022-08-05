@@ -1,11 +1,7 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
+.flexCenter {
   display: flex;
   justify-content: space-evenly;
-  background-color: rgb(250, 250, 250);
+  height: 100%;
 }
 
 .container {
@@ -26,7 +22,7 @@ body {
 
 h1 {
   font-family: "Lobster", cursive;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .info {
