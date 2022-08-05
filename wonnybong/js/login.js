@@ -1,22 +1,22 @@
-const uidInput = document.getElementById("uid");
-const upwInput = document.getElementById("upw");
-const loginBtn = document.getElementById("login-btn");
+const uidInput = document.getElementById('uid');
+const upwInput = document.getElementById('upw');
+const loginBtn = document.getElementById('login-btn');
 
 function ableLoginBtn() {
   let idValue = uidInput.value;
   let pwValue = upwInput.value;
-  if (idValue && pwValue) {
+  if (idValue.includes('@') && pwValue.length >= 5) {
     loginBtn.disabled = false;
-    loginBtn.classList.add("abled");
+    loginBtn.classList.add('abled');
   } else {
     loginBtn.disabled = true;
-    loginBtn.classList.remove("abled");
+    loginBtn.classList.remove('abled');
   }
 }
 
-uidInput.addEventListener("input", ableLoginBtn);
-upwInput.addEventListener("input", ableLoginBtn);
-loginBtn.addEventListener("click", (e) => {
+uidInput.addEventListener('input', ableLoginBtn);
+upwInput.addEventListener('input', ableLoginBtn);
+loginBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  window.open("./main.html", "_self");
+  window.open('./main.html', '_self');
 });

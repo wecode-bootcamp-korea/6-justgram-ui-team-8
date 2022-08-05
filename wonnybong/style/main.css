@@ -18,7 +18,7 @@ body {
 
 .title {
   margin-left: 20px;
-  font-family: "Lobster", cursive;
+  font-family: 'Lobster', cursive;
 }
 
 .search {
@@ -108,7 +108,7 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: url("../img/profile.png") no-repeat 15%;
+  background: url('../img/profile.png') no-repeat 15%;
   margin-right: 10px;
 }
 
@@ -193,7 +193,7 @@ body {
   width: 30px;
   height: 30px;
   margin-right: 7px;
-  background-image: url("../img/smile.png");
+  background-image: url('../img/smile.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 23px, 23px;
