@@ -3,6 +3,7 @@ body {
   background-color: #fafafa;
 }
 
+/* header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -59,18 +60,18 @@ body {
   cursor: pointer;
 }
 
-.search-container input {
+#search {
   position: relative;
+  width: 100%;
   height: 95%;
   border: none;
   background-color: #efeeef;
   font-weight: 200;
-  line-height: 36px;
   outline: none;
 }
 
 /* search toggle */
-.search-list-container {
+#search-list-container {
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -84,7 +85,7 @@ body {
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.search-list-container:after {
+#search-list-container:after {
   content: '';
   position: absolute;
   left: 45%;
@@ -173,14 +174,9 @@ body {
 .menu-list:last-child a {
   margin-left: 20px;
 }
-
-.icon-setting {
-  width: 24px;
-  height: 24px;
-}
-
 /* //header */
 
+/* main */
 .main-setting {
   display: flex;
   flex-direction: column;
@@ -189,18 +185,16 @@ body {
   top: 70px;
 }
 
-/* main */
 .feed {
   width: 472px;
   margin-bottom: 12px;
   background-color: #fff;
-  border-radius: 8px;
   border: 1px solid #dbdbdb;
+  border-radius: 8px;
   overflow: hidden;
 }
 
 /* feed id container */
-
 .feed-id {
   height: 55px;
   padding: 0 15px;
@@ -217,16 +211,7 @@ body {
   background-position: 15%;
 }
 
-.feed-id-more {
-  width: 20px;
-  height: 20px;
-}
-
 /* feed img container */
-.feed-img-container {
-  background-color: #fff;
-}
-
 .feed-img {
   width: 480px;
   overflow: hidden;
@@ -238,7 +223,6 @@ body {
 
 .feed-img-menu {
   padding: 5px 10px;
-  background-color: #fff;
 }
 
 .img-menu-group li img {
@@ -248,7 +232,6 @@ body {
 /* feed content container */
 .feed-cont-container {
   padding: 0 10px;
-  background-color: #fff;
 }
 
 .feed-cont {
@@ -262,10 +245,6 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-
-.feed-cont-more {
-  color: #8e8e8e;
 }
 
 .new-com {
@@ -313,14 +292,12 @@ body {
 
 .feed-cont-time {
   font-size: 10px;
-  color: #8e8e8e;
 }
 
 /* feed comment container */
 .feed-com {
   height: 35px;
   padding: 8px;
-  background-color: #fff;
   border-top: 0.5px solid #dbdbdb;
 }
 
@@ -349,10 +326,15 @@ body {
   flex-basis: 10%;
   border: none;
   background-color: #fff;
-  color: rgba(0, 149, 246, 0.3);
+  color: #1c95f6;
   font-weight: 700;
 }
 
-.abled {
-  color: #1c95f6;
+.comment-btn:disabled {
+  flex-basis: 10%;
+  border: none;
+  background-color: #fff;
+  color: rgba(0, 149, 246, 0.3);
+  font-weight: 700;
+  cursor: not-allowed;
 }

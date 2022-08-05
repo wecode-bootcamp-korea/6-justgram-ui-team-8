@@ -8,11 +8,9 @@ const feedImgArr = [...document.getElementsByClassName('img')];
 const likeCountArr = [...document.getElementsByClassName('like-count')];
 const commentContentArr = [...document.getElementsByClassName('feed-cont-com')];
 const allCommentArr = [...document.getElementsByClassName('feed-all-comment')];
-// 아이디 검색을 위해 필요한 요소 불러오기
+// 검색 토글을 위해 필요한 요소 불러오기
 const search = document.getElementById('search');
-const searchListContainer = document.getElementsByClassName(
-  'search-list-container'
-)[0];
+const searchListContainer = document.getElementById('search-list-container');
 const searchBtn = document.getElementById('searchBtn');
 
 // 프로필 토글을 위해 필요한 요소 불러오기
@@ -39,7 +37,7 @@ fetch('data/feeds.json')
     });
   });
 
-// 데이터를 받아와서 검색 리스트 구성
+// 데이터를 받아와서 검색 토글 리스트 구성
 fetch('data/profiles.json')
   .then((res) => res.json())
   .then((data) => {
@@ -64,24 +62,19 @@ fetch('data/profiles.json')
     });
   });
 
-// input에 입력이 들어오면 버튼 활성화 하기
+/* 댓글 추가 기능 구현 */
+// comment input에 입력이 들어오면 버튼 활성화 하기
 const getComment = (e) => {
   let inputText = e.target.value;
   let btn = e.target.form[1];
-  if (inputText) {
-    btn.disabled = false;
-    btn.classList.add('abled');
-  } else {
-    btn.disabled = true;
-    btn.classList.remove('abled');
-  }
+  inputText ? (btn.disabled = false) : (btn.disabled = true);
 };
 
 // 게시 버튼을 누르면 댓글 작성 함수 실행 후 버튼 비활성화 & input 비우기
 const postComment = (e) => {
   let index = commentForms.indexOf(e.target.form);
   e.preventDefault();
-  e.target.form[1].classList.remove('abled');
+  e.target.form[1].disabled = true;
   writeComment(e.target.form[0].value, index);
   e.target.form[0].value = '';
 };
@@ -150,11 +143,24 @@ commentForms.forEach((form) => {
   form[1].addEventListener('click', postComment);
 });
 
-// 입력을 시작하면 검색창 보이게 하기
+/* 검색 토글 기능 구현 */
+// 입력을 시작하면 검색 토글과 버튼 보이게 하기
 const startSearch = (e) => {
-  const listContainer = e.path[1].childNodes[5];
-  listContainer.style.visibility = 'visible';
-  // 포커스 들어오면 버튼 보이게 하기
+  searchListContainer.style.visibility = 'visible';
+  searchBtn.style.visibility = 'visible';
+};
+
+// 입력을 끝내면 검색 토글 사라지게 하기
+const endSearch = () => {
+  searchListContainer.style.visibility = 'hidden';
+  // input의 value가 없으면 버튼도 사라지게 하기
+  if (!search.value) {
+    searchBtn.style.visibility = 'hidden';
+  }
+};
+
+// search input이 들어오면 버튼 보이게 하기
+const visibleBtn = () => {
   searchBtn.style.visibility = 'visible';
   // 버튼을 누르면 input을 비우고 버튼 사라지게 하기
   searchBtn.addEventListener('click', () => {
@@ -163,16 +169,12 @@ const startSearch = (e) => {
   });
 };
 
-// 입력을 끝내면 검색창 사라지게 하기
-const endSearch = (e) => {
-  const listContainer = e.path[1].childNodes[5];
-  listContainer.style.visibility = 'hidden';
-};
-
-// 검색을 위한 이벤트 추가
+// 검색 토글을 위한 이벤트 추가
 search.addEventListener('focus', startSearch);
 search.addEventListener('blur', endSearch);
+search.addEventListener('input', visibleBtn);
 
+/* 프로필 토글 기능 구현 */
 // 프로필 토글을 위한 이벤트 추가
 profileBtn.addEventListener('click', () => {
   // 클릭할 때마다 프로필 메뉴의 visibility 속성 변경
