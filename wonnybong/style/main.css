@@ -165,6 +165,49 @@ body {
   color: #8e8e8e;
 }
 
+.new-com {
+  position: relative;
+}
+
+.heart {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  background-image: url('../img/heart_empty.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px, 15px;
+}
+
+.heart:hover {
+  opacity: 60%;
+}
+
+.like-heart {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  background-image: url('../img/heart_full.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px, 15px;
+}
+
+.x-icon {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  background-image: url('../img/x_icon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 11px, 11px;
+  opacity: 40%;
+}
+
+.x-icon:hover {
+  opacity: 100%;
+}
+
 .feed-cont-time {
   font-size: 10px;
   color: #8e8e8e;
