@@ -1,6 +1,18 @@
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -10,6 +22,21 @@
   align-items: center;
 }
 
+.vertical-center-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.width80 {
+  width: 80%;
+}
+
+.small-icon-setting {
+  width: 15px;
+  height: 15px;
+}
+
 .bold {
   font-weight: bold;
   font-size: 14px;
@@ -17,6 +44,10 @@
 
 .mr5 {
   margin-right: 5px;
+}
+
+.mr10 {
+  margin-right: 10px;
 }
 
 .mr15 {

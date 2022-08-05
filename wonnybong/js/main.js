@@ -15,6 +15,10 @@ const searchListContainer = document.getElementsByClassName(
 )[0];
 const searchBtn = document.getElementById('searchBtn');
 
+// 프로필 토글을 위해 필요한 요소 불러오기
+const profileBtn = document.getElementById('profile-btn');
+const profileMenu = document.getElementById('profile-menu');
+
 const writer = 'guest1';
 let datalist;
 
@@ -168,3 +172,11 @@ const endSearch = (e) => {
 // 검색을 위한 이벤트 추가
 search.addEventListener('focus', startSearch);
 search.addEventListener('blur', endSearch);
+
+// 프로필 토글을 위한 이벤트 추가
+profileBtn.addEventListener('click', () => {
+  // 클릭할 때마다 프로필 메뉴의 visibility 속성 변경
+  profileMenu.style.visibility === 'hidden'
+    ? (profileMenu.style.visibility = 'visible')
+    : (profileMenu.style.visibility = 'hidden');
+});
