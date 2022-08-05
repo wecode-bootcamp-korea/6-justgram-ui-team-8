@@ -8,22 +8,28 @@ const replyPlace = document.getElementsByClassName("reply-post");
 fetch("./data/comments.json")
   .then((res) => res.json())
   .then((res) => {
-    console.log(res.comments);
+    //console.log(res.comments);
     let arr = res.comments;
-    console.log(arr[0].userName);
-    arr.forEach((element, index) => {
+    //console.log(arr[0].userName);
+    arr.forEach((element) => {
+      //index parameter 삭제했음.
+      //이유: 동작해보니 json 데이터가 더 많이 들어왔을 때 한 피드에 댓글이 여러개 있을 수도 있으니
+      //json에 index순서를 주는 게 나아보임
+      const newIndex = element.feed - 1;
+      console.log(newIndex);
       const div = document.createElement("div");
       const writerId = document.createElement("span"); //화면에 나타야할 순서대로 작성해준다.
       const writerComment = document.createElement("span");
       const button = document.createElement("button");
+      //내용입력
       writerId.innerText = element.userName;
       writerId.classList.add("bold");
       writerComment.innerText = element.content;
       button.innerText = "x"; // 삭제 기능 구현
-      replyPlace[index].appendChild(div);
-      replyPlace[index].appendChild(writerId);
-      replyPlace[index].appendChild(writerComment);
-      replyPlace[index].appendChild(button);
+      replyPlace[newIndex].appendChild(div);
+      replyPlace[newIndex].appendChild(writerId);
+      replyPlace[newIndex].appendChild(writerComment);
+      replyPlace[newIndex].appendChild(button);
     });
   });
 

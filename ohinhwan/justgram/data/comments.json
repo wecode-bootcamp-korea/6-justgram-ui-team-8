@@ -1,21 +1,33 @@
 {
   "comments": [
     {
-      "id": 1,
-      "userName": "wecode",
-      "content": "Welcome to world best coding bootcamp!",
+      "feed": 1,
+      "userName": "justcode",
+      "content": "미장 오늘 완전 불장이네!!",
       "isLiked": true
     },
     {
-      "id": 2,
-      "userName": "code kim",
-      "content": "Hi there.",
+      "feed": 1,
+      "userName": "tgif",
+      "content": "Can I buy that now?!!",
+      "isLiked": true
+    },
+    {
+      "feed": 2,
+      "userName": "yewon_jeong",
+      "content": "여행가고 시프요.",
       "isLiked": false
     },
     {
-      "id": 3,
-      "userName": "hello lee",
-      "content": "Hey.",
+      "feed": 3,
+      "userName": "Jieun-park",
+      "content": "Hey, I like your posts. thumbs up!",
+      "isLiked": false
+    },
+    {
+      "feed": 3,
+      "userName": "Chanho-park",
+      "content": "Ummm... when I was in LA..blahblahblah",
       "isLiked": false
     }
   ]
