@@ -23,9 +23,25 @@
       <a href="#"><h2 class="title">justgram</h2></a>
       <div class="search">
         <div class="search-container">
-          <img src="./img/search_icon.png" alt="검색 아이콘" />
-          <input type="text" placeholder="검색" />
+          <img
+            class="search-icon"
+            src="./img/search_icon.png"
+            alt="검색 아이콘"
+          />
+          <input id="search" type="text" placeholder="검색" />
+          <ul
+            class="search-list-container speech-bubble"
+            style="visibility: hidden"
+          >
+            <div class="vertical-center">
+              <h3 class="bold">최근 검색 항목</h3>
+              <span class="bold abled">모두 지우기</span>
+            </div>
+          </ul>
         </div>
+        <button id="searchBtn" style="visibility: hidden">
+          <img class="delete-icon" src="./img/delete.png" alt="삭제 버튼" />
+        </button>
       </div>
       <nav class="nav">
         <ul>

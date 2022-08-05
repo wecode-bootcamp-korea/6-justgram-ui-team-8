@@ -22,22 +22,25 @@ body {
 }
 
 .search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 268px;
   height: 36px;
   margin-left: 160px;
+  padding: 0 15px;
   border-radius: 8px;
   background-color: #efeeef;
-  overflow: hidden;
 }
 
 .search-container {
   display: flex;
   align-items: center;
-  position: relative;
-  padding-left: 15px;
+  flex-basis: 100%;
+  height: inherit;
 }
 
-.search-container img {
+.search-container .search-icon {
   position: relative;
   top: 2px;
   width: 15px;
@@ -46,12 +49,71 @@ body {
   opacity: 60%;
 }
 
+.delete-icon {
+  position: relative;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  opacity: 50%;
+  cursor: pointer;
+}
+
 .search-container input {
+  position: relative;
+  height: 95%;
   border: none;
   background-color: #efeeef;
-  outline: none;
   font-weight: 200;
   line-height: 36px;
+  outline: none;
+}
+
+.search-list-container {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 61px;
+  margin-left: -5em;
+  padding: 7px 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  /* overflow: hidden; */
+}
+
+.search-list-container:after {
+  content: '';
+  position: absolute;
+  left: 45%;
+  bottom: 97%;
+  width: 0px;
+  height: 0px;
+  border-color: transparent transparent #fff transparent;
+  border-width: 20px;
+  border-style: solid;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+  z-index: -1;
+}
+
+.search-list {
+  display: flex;
+  justify-content: flex-start;
+  width: 350px;
+  height: 50px;
+  padding: 5px 3px;
+  font-size: 14px;
+}
+
+.search-list:last-child {
+  right: 10px;
+}
+
+.search-user-profile {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
 }
 
 .nav {
@@ -108,7 +170,9 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: url('../img/profile.png') no-repeat 15%;
+  background-image: url('../img/profile.png');
+  background-repeat: no-repeat;
+  background-position: 15%;
   margin-right: 10px;
 }
 
