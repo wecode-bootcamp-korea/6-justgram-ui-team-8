@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
     />
+    <script defer src="js/main.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -63,7 +64,7 @@
       <div class="main">
         <div class="container">
           <!--피드 -->
-          <div class="contents_left">
+          <div class="contents">
             <div class="inner">
               <ul class="feeds_list">
                 <li class="feeds_list_li">
@@ -145,7 +146,10 @@
                         </div>
                       </div>
                       <div class="comment_list comments_margin">
-                        <ul class="comments_info comment_list_ul">
+                        <ul
+                          id="AddComment"
+                          class="comments_info comment_list_ul"
+                        >
                           <li>
                             <div class="comments_tit">
                               <span class="user_id">김민우</span>
@@ -159,7 +163,7 @@
                       </div>
                     </div>
                   </div>
-                  <!-- 댓글창 -->
+                  <!-- 댓글달기영역 -->
                   <form class="comments_form">
                     <div class="input_box">
                       <input
@@ -169,12 +173,17 @@
                       />
                     </div>
                     <div class="button_box">
-                      <button type="button" class="btn" disabled="disabled">
+                      <button
+                        type="button"
+                        class="btn"
+                        disabled="disabled"
+                        id="commentAddBtn"
+                      >
                         <span class="">게시</span>
                       </button>
                     </div>
                   </form>
-                  <!-- 댓글창 -->
+                  <!-- //댓글달기영역 -->
                 </li>
               </ul>
             </div>
@@ -184,4 +193,34 @@
       <!-- //main -->
     </div>
   </body>
+  <!-- 댓글영역 mock data -->
+  <script>
+    const AddComments = document.getElementById("AddComment");
+    let comment_list;
+
+    fetch("./Data/comments.json", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        comment_list = data;
+        comment_list.map((comment) => {
+          const liElement = document.createElement("li");
+          const divElement = document.createElement("div");
+          divElement.className = "comments_tit";
+          const idSpanElement = document.createElement("span");
+          idSpanElement.className = "user_id";
+          const commentSpanElement = document.createElement("span");
+          commentSpanElement.className = "comment_contents";
+          idSpanElement.innerText = comment.id;
+          commentSpanElement.innerText = comment.content;
+
+          AddComments.append(liElement);
+          liElement.appendChild(divElement);
+          divElement.appendChild(idSpanElement);
+          divElement.appendChild(commentSpanElement);
+        });
+      });
+  </script>
+  <!-- //댓글영역 mock data -->
 </html>

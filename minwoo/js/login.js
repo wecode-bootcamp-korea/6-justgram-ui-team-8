@@ -1,4 +1,4 @@
-console.log("JavaScript가 동작중입니다.");
+// console.log("JavaScript가 동작중입니다.");
 
 const inputId = document.getElementById("id");
 const inputPassword = document.getElementById("pw");
