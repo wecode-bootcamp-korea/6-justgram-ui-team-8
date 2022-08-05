@@ -20,137 +20,139 @@
 
   <body>
     <header class="header">
-      <a href="#"><h2 class="title">justgram</h2></a>
-      <div class="search">
-        <div class="search-container">
-          <img
-            class="search-icon"
-            src="./img/search_icon.png"
-            alt="검색 아이콘"
-          />
-          <input id="search" type="text" placeholder="검색" />
-          <!-- search toggle -->
-          <ul id="search-list-container" style="visibility: hidden">
-            <div class="vertical-center">
-              <h3 class="bold">최근 검색 항목</h3>
-              <span class="bold color-blue">모두 지우기</span>
-            </div>
-          </ul>
-        </div>
-        <button id="searchBtn" style="visibility: hidden">
-          <img class="delete-icon" src="./img/delete.png" alt="삭제 버튼" />
-        </button>
-        <!-- // search toggle -->
-      </div>
-      <nav class="nav">
-        <ul>
-          <li>
-            <a href="#">
-              <img
-                class="icon-setting"
-                alt="홈으로"
-                src="./img/home_icon.png"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                class="icon-setting"
-                alt="메세지"
-                src="./img/message_icon.png"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                class="icon-setting"
-                alt="게시글 작성"
-                src="./img/plus_icon.png"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                class="icon-setting"
-                alt="탐색"
-                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                class="icon-setting"
-                alt="소식"
-                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#" id="profile-btn">
-              <img
-                class="icon-setting"
-                alt="프로필"
-                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-              />
-            </a>
-            <!-- profile toggle -->
-            <ul
-              id="profile-menu"
-              class="flex-column"
-              style="visibility: hidden"
-            >
-              <li class="menu-list width80">
-                <a href="#" class="vertical-center-left">
-                  <img
-                    class="small-icon-setting mr10"
-                    src="./img/user.png"
-                    alt="프로필 아이콘"
-                  />
-                  <p>프로필</p>
-                </a>
-              </li>
-              <li class="menu-list width80">
-                <a href="#" class="vertical-center-left">
-                  <img
-                    class="small-icon-setting mr10"
-                    src="./img/bookmark.png"
-                    alt="저장됨 아이콘"
-                  />
-                  <p>저장됨</p>
-                </a>
-              </li>
-              <li class="menu-list width80">
-                <a href="#" class="vertical-center-left">
-                  <img
-                    class="small-icon-setting mr10"
-                    src="./img/settings.png"
-                    alt="설정 아이콘"
-                  />
-                  <p>설정</p>
-                </a>
-              </li>
-              <li class="menu-list width80">
-                <a href="#" class="vertical-center-left">
-                  <img
-                    class="small-icon-setting mr10"
-                    src="./img/change.png"
-                    alt="계정 전환 아이콘"
-                  />
-                  <p>계정 전환</p>
-                </a>
-              </li>
-              <li class="menu-list">
-                <a href="./login.html"> 로그아웃 </a>
-              </li>
+      <div class="header-container flex-center">
+        <a href="#"><h2 class="title mr10">justgram</h2></a>
+        <div class="search">
+          <div class="search-container">
+            <img
+              class="search-icon"
+              src="./img/search_icon.png"
+              alt="검색 아이콘"
+            />
+            <input id="search" type="text" placeholder="검색" />
+            <!-- search toggle -->
+            <ul id="search-list-container" style="visibility: hidden">
+              <div class="vertical-center">
+                <h3 class="bold">최근 검색 항목</h3>
+                <span class="bold color-blue">모두 지우기</span>
+              </div>
             </ul>
-            <!-- // profile toggle -->
-          </li>
-        </ul>
-      </nav>
+          </div>
+          <button id="searchBtn" style="visibility: hidden">
+            <img class="delete-icon" src="./img/delete.png" alt="삭제 버튼" />
+          </button>
+          <!-- // search toggle -->
+        </div>
+        <nav class="nav ml5">
+          <ul>
+            <li>
+              <a href="#">
+                <img
+                  class="icon-setting"
+                  alt="홈으로"
+                  src="./img/home_icon.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  class="icon-setting"
+                  alt="메세지"
+                  src="./img/message_icon.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  class="icon-setting"
+                  alt="게시글 작성"
+                  src="./img/plus_icon.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  class="icon-setting"
+                  alt="탐색"
+                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  class="icon-setting"
+                  alt="소식"
+                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" id="profile-btn">
+                <img
+                  class="icon-setting"
+                  alt="프로필"
+                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+                />
+              </a>
+              <!-- profile toggle -->
+              <ul
+                id="profile-menu"
+                class="flex-column"
+                style="visibility: hidden"
+              >
+                <li class="menu-list width80">
+                  <a href="#" class="vertical-center-left">
+                    <img
+                      class="small-icon-setting mr10"
+                      src="./img/user.png"
+                      alt="프로필 아이콘"
+                    />
+                    <p>프로필</p>
+                  </a>
+                </li>
+                <li class="menu-list width80">
+                  <a href="#" class="vertical-center-left">
+                    <img
+                      class="small-icon-setting mr10"
+                      src="./img/bookmark.png"
+                      alt="저장됨 아이콘"
+                    />
+                    <p>저장됨</p>
+                  </a>
+                </li>
+                <li class="menu-list width80">
+                  <a href="#" class="vertical-center-left">
+                    <img
+                      class="small-icon-setting mr10"
+                      src="./img/settings.png"
+                      alt="설정 아이콘"
+                    />
+                    <p>설정</p>
+                  </a>
+                </li>
+                <li class="menu-list width80">
+                  <a href="#" class="vertical-center-left">
+                    <img
+                      class="small-icon-setting mr10"
+                      src="./img/change.png"
+                      alt="계정 전환 아이콘"
+                    />
+                    <p>계정 전환</p>
+                  </a>
+                </li>
+                <li class="menu-list">
+                  <a href="./login.html"> 로그아웃 </a>
+                </li>
+              </ul>
+              <!-- // profile toggle -->
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!-- //header -->
     <!-- main -->

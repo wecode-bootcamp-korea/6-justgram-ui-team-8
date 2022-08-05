@@ -175,10 +175,22 @@ search.addEventListener('blur', endSearch);
 search.addEventListener('input', visibleBtn);
 
 /* 프로필 토글 기능 구현 */
+// 프로필 토글의 left를 설정해주는 함수
+const setLocation = () => {
+  let getLocation = profileBtn.getBoundingClientRect();
+  profileMenu.style.left = `${getLocation.left - 175}px`;
+};
+
 // 프로필 토글을 위한 이벤트 추가
 profileBtn.addEventListener('click', () => {
+  setLocation();
   // 클릭할 때마다 프로필 메뉴의 visibility 속성 변경
   profileMenu.style.visibility === 'hidden'
     ? (profileMenu.style.visibility = 'visible')
     : (profileMenu.style.visibility = 'hidden');
+});
+
+// 브라우저가 resize될 때마다 setLocation 함수 실행
+window.addEventListener('resize', () => {
+  setLocation();
 });
