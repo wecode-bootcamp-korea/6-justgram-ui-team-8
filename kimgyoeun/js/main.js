@@ -2,13 +2,53 @@ const commentWrite = document.querySelectorAll(".write");
 const commentBtn = document.querySelectorAll(".write-button");
 const commentList = document.querySelectorAll(".comment");
 
+const comments = document.querySelectorAll(".comment");
+
+fetch("./data/comments.json", {
+  method: "GET", // 데이터를 '가져올 때' 사용되는 메서드 (GET | POST | PUT | DELETE)
+})
+  //response(=HTTP 응답 전체를 나타내는 객체) 객체를 받아서 json형대로 변경
+  // then = '요청'이 '성공'했을 때
+  // catch = '요청'이 '실패'했을 때
+  .then((res) => res.json())
+  .then((data) => {
+    // console.log(data);
+    // 빈 변수에 데이터를 할당
+    let commentArray = data.comments;
+    // console.log(comment_list);
+    // commentArray.map((comment, index) => {
+    commentArray.forEach((comment) => {
+      for (let i = 0; i < commentArray.length; i++) {
+        const wrapDiv = document.createElement("div");
+        const dt = document.createElement("dt");
+        const dd = document.createElement("dd");
+        const p = document.createElement("p");
+        const likeBtn = document.createElement("button");
+
+        likeBtn.setAttribute("type", "button");
+        likeBtn.textContent = "좋아요";
+        p.innerText = comment.content;
+
+        p.appendChild(likeBtn);
+        dd.appendChild(p);
+        dt.innerText = comment.userName;
+
+        wrapDiv.append(dt, dd);
+        comments[i].append(wrapDiv);
+        // comments[index].appendChild(<div><dt /><dd>p,button</dd></div>);
+      }
+    });
+  })
+  .catch((e) => {
+    console.error("요청에 실패했습니다", e);
+  });
+
+// 댓글 추가 기능
 const addComment = (index) => {
   //문제가 예상되는 전라인에 디버깅 걸어봐야함
   // debugger;
   //커맨드를 누르고 커서 포인터로 바뀌면 클릭 -> 선언부로 바로 이동
   const wrapDiv = document.createElement("div");
-
-  console.log("클릭 테스트");
 
   const commentText = commentWrite[index].value; // primitive value. String
   const contentElement = document.createElement("dd");
