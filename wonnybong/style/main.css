@@ -95,8 +95,7 @@ body {
   content: '';
   position: absolute;
   left: 45%;
-  bottom: 97%;
-  width: 0px;
+  top: -30px;
   height: 0px;
   border-color: transparent transparent #fff transparent;
   border-width: 20px;
@@ -212,7 +211,7 @@ body {
   height: 32px;
   margin-right: 10px;
   border-radius: 50%;
-  background-image: url('../img/profile.png');
+  background-image: url('../img/bongprofile.png');
   background-repeat: no-repeat;
   background-position: 15%;
 }

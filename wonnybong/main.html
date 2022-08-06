@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/reset.css" />
-    <link rel="stylesheet" href="./style/common.css" />
-    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" type="text/css" href="./style/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./style/common.css" />
+    <link rel="stylesheet" type="text/css" href="./style/main.css" />
     <script defer src="./js/main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -93,9 +93,9 @@
             <li>
               <a href="#" id="profile-btn">
                 <img
-                  class="icon-setting"
+                  class="icon-setting curcle"
                   alt="프로필"
-                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+                  src="./img/default_profile.png"
                 />
               </a>
               <!-- profile toggle -->
@@ -162,7 +162,9 @@
         <div class="feed-id vertical-center">
           <div class="vertical-center">
             <a href="#">
-              <div class="profile-cur"></div>
+              <div class="profile-cur">
+                <p class="visuallyhidden">프로필 이미지</p>
+              </div>
             </a>
             <a href="#">
               <span class="bold feed-id-uid">유저아이디</span>

@@ -18,13 +18,14 @@ const profileBtn = document.getElementById('profile-btn');
 const profileMenu = document.getElementById('profile-menu');
 
 const writer = 'guest1';
-let datalist;
+let feedData;
+let userIdData;
 
 // 데이터를 받아와서 피드의 컨텐츠 바꿔주기
 fetch('data/feeds.json')
   .then((res) => res.json())
   .then((data) => {
-    datalist = data;
+    feedData = data;
     data.forEach((comment) => {
       let i = data.indexOf(comment);
       idUidArr[i].innerText = comment.userName;
@@ -34,31 +35,6 @@ fetch('data/feeds.json')
       commentContentArr[i].innerText = comment.content;
       allCommentArr[i].innerText = `댓글 ${comment.allComment}개 모두 보기`;
       commentTimeArr[i].innerText = `${comment.createdTime}시간 전`;
-    });
-  });
-
-// 데이터를 받아와서 검색 토글 리스트 구성
-fetch('data/profiles.json')
-  .then((res) => res.json())
-  .then((data) => {
-    data.forEach((profile) => {
-      const searchList = document.createElement('li');
-      searchList.classList.add('search-list', 'vertical-center');
-      const userImg = document.createElement('img');
-      userImg.classList.add('search-user-profile', 'mr15');
-      userImg.src = profile.profileImg;
-      const userIdContainer = document.createElement('div');
-      const userId = document.createElement('p');
-      userId.innerText = profile.userId;
-      userId.classList.add('bold');
-      const userDesc = document.createElement('p');
-      userDesc.innerText = profile.desc;
-      userDesc.classList.add('feed-cont-more');
-      userIdContainer.append(userId, userDesc);
-      const xIcon = document.createElement('span');
-      xIcon.classList.add('icon-setting', 'x-icon', 'mr15');
-      searchList.append(userImg, userIdContainer, xIcon);
-      searchListContainer.append(searchList);
     });
   });
 
@@ -82,26 +58,15 @@ const postComment = (e) => {
 // 댓글 작성 함수
 const writeComment = (content, i) => {
   // 댓글 생성 및 추가
-  const newComment = document.createElement('p');
-  newComment.innerText = content;
-  newComment.classList.add('new-com');
-  const userId = document.createElement('span');
-  userId.innerText = writer;
-  userId.classList.add('bold');
-  userId.classList.add('mr5');
-  newComment.prepend(userId);
-  const heart = document.createElement('span');
-  heart.classList.add('icon-setting');
-  heart.classList.add('heart');
-  heart.classList.add('hearts');
-  newComment.append(heart);
-  const xIcon = document.createElement('span');
-  xIcon.classList.add('icon-setting');
-  xIcon.classList.add('x-icon');
-  newComment.append(xIcon);
   const newComContainer = document.createElement('div');
   newComContainer.classList.add('new-com-container');
-  newComContainer.append(newComment);
+  newComContainer.innerHTML = `
+  <p class="new-com">
+    <span class="bold mr5">${writer}</span>
+    ${content}
+    <span class="icon-setting heart hearts"></span>    
+    <span class="icon-setting x-icon"></span>    
+  </p>`;
   // '몇 시간 전 앞'에 새 댓글 추가
   const commentTime = commentTimeArr[i];
   const commentContainer = commentTime.parentNode;
@@ -144,6 +109,27 @@ commentForms.forEach((form) => {
 });
 
 /* 검색 토글 기능 구현 */
+// 데이터를 받아와서 검색 토글 리스트 구성
+fetch('data/profiles.json')
+  .then((res) => res.json())
+  .then((data) => {
+    userIdData = data;
+    data.forEach((profile, i) => {
+      if (i > 4) {
+        return;
+      }
+      searchListContainer.innerHTML += `
+      <li class="search-list vertical-center">
+        <img class="search-user-profile mr15 curcle" src=${profile.profileImg} />
+        <div>
+          <p class="bold">${profile.userId}</p>
+          <p class="feed-cont-more">${profile.desc}</p>
+        </div>
+        <span class="icon-setting x-icon mr15"></span>
+      </li>`;
+    });
+  });
+
 // 입력을 시작하면 검색 토글과 버튼 보이게 하기
 const startSearch = (e) => {
   searchListContainer.style.visibility = 'visible';
@@ -162,6 +148,53 @@ const endSearch = () => {
 // search input이 들어오면 버튼 보이게 하기
 const visibleBtn = () => {
   searchBtn.style.visibility = 'visible';
+  const loadingDiv = document.createElement('div');
+  // 로딩 출력
+  loadingDiv.innerHTML = `
+  <li class="search-list vertical-center">
+  <img class=" mr15 curcle"/>
+  <div>
+  <p class="bold">잠시 기다려주세요 . . .</p>
+  <p class="feed-cont-more">Now Loading . . .</p>
+  </div>
+  <span class="icon-setting mr15"></span>
+  </li>`;
+  searchListContainer.innerHTML = '';
+  searchListContainer.appendChild(loadingDiv);
+  // 검색 내용과 같은 userId만 출력
+  let loading = setTimeout(() => {
+    const searchData = userIdData.filter((data) => {
+      if (!search.value) {
+        return;
+      }
+      return data.userId.includes(search.value);
+    });
+    searchListContainer.innerHTML = '';
+    searchData.forEach((profile) => {
+      searchListContainer.innerHTML += `
+      <li class="search-list vertical-center">
+      <img class="search-user-profile mr15 curcle" src=${profile.profileImg} />
+      <div>
+      <p class="bold">${profile.userId}</p>
+      <p class="feed-cont-more">${profile.desc}</p>
+      </div>
+      <span class="icon-setting x-icon mr15"></span>
+      </li>`;
+    });
+    clearTimeout(loading);
+    // 일치하는 검색 결과 없음 출력
+    if (!searchData.length) {
+      searchListContainer.innerHTML = `<li class="search-list vertical-center">
+      <img class=" mr15 curcle"/>
+        <div>
+        <p class="bold">검색 결과 없음</p>
+        <p class="feed-cont-more">No Result</p>
+      </div>
+      <span class="icon-setting mr15"></span>
+    </li>`;
+    }
+  }, 500);
+
   // 버튼을 누르면 input을 비우고 버튼 사라지게 하기
   searchBtn.addEventListener('click', () => {
     search.value = '';
