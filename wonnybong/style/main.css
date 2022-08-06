@@ -39,6 +39,9 @@ body {
   padding: 0 15px;
   border-radius: 8px;
   background-color: #efeeef;
+
+  margin-left: 120px;
+  transition: margin-left 300ms linear;
 }
 
 .search-container {
@@ -219,15 +222,17 @@ body {
 /* feed img container */
 .feed-img {
   width: 480px;
+  height: 480px;
   overflow: hidden;
 }
 
-.feed-img > img {
-  height: 480px;
+.img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .feed-img-menu {
-  padding: 5px 10px;
+  padding: 10px 10px 3px 10px;
 }
 
 .img-menu-group li img {
@@ -253,7 +258,9 @@ body {
 }
 
 .new-com {
+  display: block;
   position: relative;
+  margin: 8px 0;
 }
 
 .heart {
@@ -352,5 +359,10 @@ body {
 
   .search {
     display: none;
+  }
+}
+@media (640px < width <= 800px) {
+  .search {
+    margin-left: 0;
   }
 }

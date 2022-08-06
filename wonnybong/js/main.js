@@ -1,112 +1,190 @@
-// 댓글 추가를 위해 필요한 요소 불러오기
-const commentForms = [...document.getElementsByClassName('feed-com-form')];
-const commentTimeArr = [...document.getElementsByClassName('feed-cont-time')];
-// fetch후 콘텐츠를 변경 할 요소 불러오기
-const idUidArr = [...document.getElementsByClassName('feed-id-uid')];
-const contUidArr = [...document.getElementsByClassName('feed-cont-uid')];
-const feedImgArr = [...document.getElementsByClassName('img')];
-const likeCountArr = [...document.getElementsByClassName('like-count')];
-const commentContentArr = [...document.getElementsByClassName('feed-cont-com')];
-const allCommentArr = [...document.getElementsByClassName('feed-all-comment')];
-// 검색 토글을 위해 필요한 요소 불러오기
+// 검색 토글을 위해 필요한 요소
 const search = document.getElementById('search');
 const searchListContainer = document.getElementById('search-list-container');
 const searchBtn = document.getElementById('searchBtn');
+let userIdData;
 
-// 프로필 토글을 위해 필요한 요소 불러오기
+// 프로필 토글을 위해 필요한 요소
 const profileBtn = document.getElementById('profile-btn');
 const profileMenu = document.getElementById('profile-menu');
 
+// 피드 관련 기능에 필요한 요소
+const main = document.getElementById('main');
 const writer = 'guest1';
 let feedData;
-let userIdData;
 
-// 데이터를 받아와서 피드의 컨텐츠 바꿔주기
+/* 데이터를 받아온 후 피드 동적 생성 */
 fetch('data/feeds.json')
   .then((res) => res.json())
   .then((data) => {
     feedData = data;
     data.forEach((comment) => {
-      let i = data.indexOf(comment);
-      idUidArr[i].innerText = comment.userName;
-      contUidArr[i].innerText = comment.userName;
-      feedImgArr[i].src = comment.imageSrc;
-      likeCountArr[i].innerText = `좋아요 ${comment.likeCount}개`;
-      commentContentArr[i].innerText = comment.content;
-      allCommentArr[i].innerText = `댓글 ${comment.allComment}개 모두 보기`;
-      commentTimeArr[i].innerText = `${comment.createdTime}시간 전`;
+      console.log(comment);
+      main.innerHTML += `<section class="feed">
+      <!-- feed id container -->
+      <div class="feed-id vertical-center">
+        <div class="vertical-center">
+          <a href="#">
+            <div class="profile-cur"></div>
+          </a>
+          <a href="#">
+            <span class="bold feed-id-uid">${comment.userName}</span>
+          </a>
+        </div>
+        <a href="#">
+          <img
+            class="medium-icon-setting"
+            src="./img/option.png"
+            alt="더보기 아이콘"
+          />
+        </a>
+      </div>
+      <!-- feed img container -->
+      <div class="feed-img-container">
+        <div class="feed-img flex-center">
+          <img class="img" src="${comment.imageSrc}" alt="${comment.imgAlt}" />
+        </div>
+        <div class="feed-img-menu">
+          <ul class="vertical-center">
+            <div class="img-menu-group vertical-center">
+              <li>
+                <a href="#">
+                  <img
+                    class="icon-setting"
+                    alt="좋아요"
+                    src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img class="icon-setting" alt="댓글" src="./img/chat.png" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    class="icon-setting"
+                    alt="공유"
+                    src="./img/message_icon.png"
+                  />
+                </a>
+              </li>
+            </div>
+            <li>
+              <a href="#">
+                <img
+                  class="icon-setting"
+                  alt="저장"
+                  src="./img/bookmark.png"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- feed content container -->
+      <div class="feed-cont-container">
+        <p class="bold like-count">좋아요 ${comment.likeCount}개</p>
+        <p class="feed-cont">
+          <span class="bold mr5 feed-cont-uid">${comment.userName}</span
+          ><span class="feed-cont-com">${comment.content}</span
+          ><a href="#" class="color-gray ml5">더 보기</a>
+        </p>
+        <a href="#" class="color-gray feed-all-comment">댓글 ${comment.allComment}개 모두 보기</a>
+        <p class="feed-cont-time color-gray">${comment.createdTime}시간전</p>
+      </div>
+      <!-- feed comment container -->
+      <div class="feed-com vertical-center">
+        <div class="smile-icon"></div>
+        <form class="feed-com-form vertical-center">
+          <input
+            class="comment-input"
+            type="text"
+            placeholder="댓글 달기..."
+          />
+          <button type="submit" class="comment-btn" disabled>게시</button>
+        </form>
+      </div>
+      </section>`;
+    });
+
+    /* 댓글 추가 기능 구현 */
+    // 댓글 추가를 위해 필요한 요소 불러오기
+    const commentForms = [...document.getElementsByClassName('feed-com-form')];
+    const commentTimeArr = [
+      ...document.getElementsByClassName('feed-cont-time'),
+    ];
+
+    // comment input에 입력이 들어오면 버튼 활성화 하기
+    const getComment = (e) => {
+      let inputText = e.target.value;
+      let btn = e.target.form[1];
+      inputText ? (btn.disabled = false) : (btn.disabled = true);
+    };
+
+    // 게시 버튼을 누르면 댓글 작성 함수 실행 후 버튼 비활성화 & input 비우기
+    const postComment = (e) => {
+      let index = commentForms.indexOf(e.target.form);
+      e.preventDefault();
+      e.target.form[1].disabled = true;
+      writeComment(e.target.form[0].value, index);
+      e.target.form[0].value = '';
+    };
+
+    // 댓글 작성 함수
+    const newComContainer = document.createElement('ul');
+    newComContainer.classList.add('new-com-container');
+    const writeComment = (content, i) => {
+      // 댓글 생성 및 추가
+      newComContainer.innerHTML += `
+      <li class="new-com">
+        <span class="bold mr5">${writer}</span>
+        ${content}
+        <span class="icon-setting heart hearts"></span>    
+        <span class="icon-setting x-icon"></span>    
+      </li>`;
+      // '몇 시간 전 앞'에 새 댓글 추가
+      const commentTime = commentTimeArr[i];
+      const commentContainer = commentTime.parentNode;
+      commentContainer.insertBefore(newComContainer, commentTime);
+
+      // 하트(좋아요 기능)와 X아이콘(삭제 기능)에 이벤트 추가
+      const commentHeart = [...document.getElementsByClassName('hearts')];
+      const commentX = [...document.getElementsByClassName('x-icon')];
+      commentHeart.forEach((heart) => {
+        heart.addEventListener('click', heartChange);
+      });
+      commentX.forEach((xIcon) => {
+        xIcon.addEventListener('click', removeComment);
+      });
+    };
+
+    // 하트 좋아요 기능
+    const heartChange = (e) => {
+      let heart = e.target;
+      if (heart.classList.contains('heart')) {
+        heart.classList.remove('heart');
+        heart.classList.add('like-heart');
+      } else {
+        heart.classList.remove('like-heart');
+        heart.classList.add('heart');
+      }
+    };
+
+    // 댓글 삭제 기능 & 삭제 전 comfirm
+    const removeComment = (e) => {
+      if (confirm('정말 삭제하시겠습니까?')) {
+        e.path[1].remove();
+      }
+    };
+
+    // form(댓글 추가 기능)에 이벤트 등록
+    commentForms.forEach((form) => {
+      form.addEventListener('input', getComment);
+      form[1].addEventListener('click', postComment);
     });
   });
-
-/* 댓글 추가 기능 구현 */
-// comment input에 입력이 들어오면 버튼 활성화 하기
-const getComment = (e) => {
-  let inputText = e.target.value;
-  let btn = e.target.form[1];
-  inputText ? (btn.disabled = false) : (btn.disabled = true);
-};
-
-// 게시 버튼을 누르면 댓글 작성 함수 실행 후 버튼 비활성화 & input 비우기
-const postComment = (e) => {
-  let index = commentForms.indexOf(e.target.form);
-  e.preventDefault();
-  e.target.form[1].disabled = true;
-  writeComment(e.target.form[0].value, index);
-  e.target.form[0].value = '';
-};
-
-// 댓글 작성 함수
-const writeComment = (content, i) => {
-  // 댓글 생성 및 추가
-  const newComContainer = document.createElement('div');
-  newComContainer.classList.add('new-com-container');
-  newComContainer.innerHTML = `
-  <p class="new-com">
-    <span class="bold mr5">${writer}</span>
-    ${content}
-    <span class="icon-setting heart hearts"></span>    
-    <span class="icon-setting x-icon"></span>    
-  </p>`;
-  // '몇 시간 전 앞'에 새 댓글 추가
-  const commentTime = commentTimeArr[i];
-  const commentContainer = commentTime.parentNode;
-  commentContainer.insertBefore(newComContainer, commentTime);
-
-  // 하트(좋아요 기능)와 X아이콘(삭제 기능)에 이벤트 추가
-  const commentHeart = [...document.getElementsByClassName('hearts')];
-  const commentX = [...document.getElementsByClassName('x-icon')];
-  commentHeart.forEach((heart) => {
-    heart.addEventListener('click', heartChange);
-  });
-  commentX.forEach((xIcon) => {
-    xIcon.addEventListener('click', removeComment);
-  });
-};
-
-// 하트 좋아요 기능
-const heartChange = (e) => {
-  let heart = e.target;
-  if (heart.classList.contains('heart')) {
-    heart.classList.remove('heart');
-    heart.classList.add('like-heart');
-  } else {
-    heart.classList.remove('like-heart');
-    heart.classList.add('heart');
-  }
-};
-
-// 댓글 삭제 기능 & 삭제 전 comfirm
-const removeComment = (e) => {
-  if (confirm('정말 삭제하시겠습니까?')) {
-    e.path[1].remove();
-  }
-};
-
-// form(댓글 추가 기능)에 이벤트 등록
-commentForms.forEach((form) => {
-  form.addEventListener('input', getComment);
-  form[1].addEventListener('click', postComment);
-});
 
 /* 검색 토글 기능 구현 */
 // 데이터를 받아와서 검색 토글 리스트 구성
