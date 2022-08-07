@@ -1,7 +1,7 @@
 const idInput = document.getElementsByClassName("id")[0];
 const pwInput = document.getElementsByClassName("pw")[0];
 const loginButton = document.getElementsByClassName("loginBtn")[0];
-
+/*
 //로그인 기본값
 loginButton.disabled = true;
 let loginIdInput = false;
@@ -42,7 +42,7 @@ const buttonActivation = () => {
     loginButton.disabled = false;
   } else {
     // 버튼 비활성화 로직
-    loginButton.style.backgroundColor = "B2DFFC";
+    loginButton.style.backgroundColor = "#B2DFFC";
     loginButton.style.cursor = "auto";
     loginButton.disabled = true;
   }
@@ -58,3 +58,5 @@ const moveToMain = () => {
 };
 
 loginButton.addEventListener("click", moveToMain);
+
+*/

@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JUSTGRAM MAIN</title>
-    <script src="https://use.fontawesome.com/releases/v6.1.2/js/all.js"></script>
     <link rel="stylesheet" href="./style/common.css" />
     <link rel="stylesheet" href="./style/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v6.1.2/js/all.js"></script>
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
-    <!--nav(header) 시작-->
-    <nav class="fixedHead">
+  <!--header-->
+    <div class="fixedHead">
       <div class="navLeft">
         <div class="logo">
           <i class="fa-brands fa-instagram instaLogo"></i>
@@ -50,14 +51,14 @@
             />
           </a>
       </div>
-    </nav>
-    <!--nav(header) 끝-->
+    </div>
+    <!--header-->
 
-
-    <main class="contents">
-      <!--feed#1 시작-->
-      <section class="feed_1">
-        <header class="feedHeader">
+    <!--main-->
+    <div class="contents">
+      <!--첫번째 피드-->
+      <div class="feed_1">
+        <div class="feedHeader">
           <div class="myId">
             <img class="me" alt="프로필사진" src="./img/me.JPG" width="30px" height="30px" />
             <div class="keemteem">keem_teem</div>
@@ -65,7 +66,7 @@
               <img alt="더보기" src="./img/more.png"  width="20px" height="20px" />
             </div>
           </div>
-        </header>
+        </div>
         <div class="feedCenter">
         <img alt="feedContent" class="feedImg" src="./img/feed_img.jpg" />
         </div>
@@ -112,20 +113,161 @@
               </span>
             </div>
           </div>
+          <div class="comments-3"></div>
           <div class="time">
             10초 전
           </div>
         </div>
-        <div class="commentBox">
-          <div class="writeComment">
-            댓글 달기...
-          </div>
-          <div class="posting">
-            게시
+        <div class="feedFooter">
+          <form class="commentBox">
+            <input class="writeComment" type="text" placeholder="댓글 달기..." />
+            <button class="posting" type="button">게시</button>
+          </form>
+        </div>
+      </div>
+      <!--첫번째 피드-->
+
+      <!--두번째 피드-->
+      <div class="feed_1">
+        <div class="feedHeader">
+          <div class="myId">
+            <img class="me" alt="프로필사진" src="./img/me.JPG" width="30px" height="30px" />
+            <div class="keemteem">keem_teem</div>
+            <div class="dots"> 
+              <img alt="더보기" src="./img/more.png"  width="20px" height="20px" />
+            </div>
           </div>
         </div>
-      </section>
-      <!--feed#1 끝-->
-    </main>
+        <div class="feedCenter">
+        <img alt="feedContent" class="feedImg" src="./img/feed_img.jpg" />
+        </div>
+        <div class="icons" >
+          <div class="iconsLeft">
+            <a href="#">
+              <img alt="fullHeart" src="./img/heart.png" width="22px" height="22px" />
+            </a>
+            <a href="#">
+              <img alt="chat" src="./img/chat.png" width="22px" height="22px" />
+            </a>
+            <a href="#">
+              <img alt="upload" src="./img/upload.png" width="22px" height="22px" />
+            </a>
+          </div>
+          <div class="iconsRight">
+            <a href="#">
+              <img alt="save" src="./img/save-instagram.png" width="22px" height="22px" />
+            </a>
+          </div>
+        </div>
+        <div class="likes">
+          <div class="follower">
+            <img alt="friend" class="profileImg" src="./img/follower.jpg" width="15px" height="15px" />
+          </div>
+          <div class="likeComment">
+            <span class="bold">Leonid Shaydulin</span>님 <span class="bold">외 10명</span>이 좋아합니다
+          </div>
+        </div>
+        <div class="comments">
+          <div class="comments-1">
+            <span class="bold">moonbdns</span> 
+            <span>아~ 이 날 너무 재밋었지 그 때 그...</span>
+            <span class="softly">더 보기</span>
+          </div>
+          <div class="comments-2">
+            <div>
+              <span class="bold">dbqudwo333</span> 
+              <span>날씨 뭐야 미쳤다!! </span>
+            </div>
+            <div class="likeImg">
+              <span>
+                <img class="commentLike" alt="좋아요" src="./img/thinemptyheart.png" width="12px" height="12px"/>
+              </span>
+            </div>
+          </div>
+          <div class="comments-3"></div>
+          <div class="time">
+            10초 전
+          </div>
+        </div>
+        <div class="feedFooter">
+          <form class="commentBox">
+            <input class="writeComment" type="text" placeholder="댓글 달기..." />
+            <button class="posting" type="button">게시</button>
+          </form>
+        </div>
+      </div>
+      <!--두번째 피드-->
+
+      <!--세번째 피드-->
+      <div class="feed_1">
+        <div class="feedHeader">
+          <div class="myId">
+            <img class="me" alt="프로필사진" src="./img/me.JPG" width="30px" height="30px" />
+            <div class="keemteem">keem_teem</div>
+            <div class="dots"> 
+              <img alt="더보기" src="./img/more.png"  width="20px" height="20px" />
+            </div>
+          </div>
+        </div>
+        <div class="feedCenter">
+        <img alt="feedContent" class="feedImg" src="./img/feed_img.jpg" />
+        </div>
+        <div class="icons" >
+          <div class="iconsLeft">
+            <a href="#">
+              <img alt="fullHeart" src="./img/heart.png" width="22px" height="22px" />
+            </a>
+            <a href="#">
+              <img alt="chat" src="./img/chat.png" width="22px" height="22px" />
+            </a>
+            <a href="#">
+              <img alt="upload" src="./img/upload.png" width="22px" height="22px" />
+            </a>
+          </div>
+          <div class="iconsRight">
+            <a href="#">
+              <img alt="save" src="./img/save-instagram.png" width="22px" height="22px" />
+            </a>
+          </div>
+        </div>
+        <div class="likes">
+          <div class="follower">
+            <img alt="friend" class="profileImg" src="./img/follower.jpg" width="15px" height="15px" />
+          </div>
+          <div class="likeComment">
+            <span class="bold">Leonid Shaydulin</span>님 <span class="bold">외 10명</span>이 좋아합니다
+          </div>
+        </div>
+        <div class="comments">
+          <div class="comments-1">
+            <span class="bold">moonbdns</span> 
+            <span>아~ 이 날 너무 재밋었지 그 때 그...</span>
+            <span class="softly">더 보기</span>
+          </div>
+          <div class="comments-2">
+            <div>
+              <span class="bold">dbqudwo333</span> 
+              <span>날씨 뭐야 미쳤다!! </span>
+            </div>
+            <div class="likeImg">
+              <span>
+                <img class="commentLike" alt="좋아요" src="./img/thinemptyheart.png" width="12px" height="12px"/>
+              </span>
+            </div>
+          </div>
+          <div class="comments-3"></div>
+          <div class="time">
+            10초 전
+          </div>
+        </div>
+        <div class="feedFooter">
+          <form class="commentBox">
+            <input class="writeComment" type="text" placeholder="댓글 달기..." />
+            <button class="posting" type="button">게시</button>
+          </form>
+        </div>
+      </div>
+      <!--세번째 피드-->
+    <!--main-->  
   </body>
 </html>
