@@ -31,6 +31,7 @@ h1 {
   border-radius: 5px;
 }
 .login-input {
+  outline: none;
   border: none;
   width: 100%;
   margin: 10px;
