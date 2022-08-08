@@ -8,7 +8,7 @@ const replyPlace = document.getElementsByClassName("reply-post");
 fetch("./data/comments.json")
   .then((res) => res.json())
   .then((res) => {
-    //console.log(res.comments);
+    //console.log(res);
     let arr = res.comments;
     //console.log(arr[0].userName);
     arr.forEach((element) => {

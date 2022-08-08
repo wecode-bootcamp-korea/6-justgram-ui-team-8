@@ -14,7 +14,7 @@
     },
     {
       "feed": 2,
-      "userName": "yewon_jeong",
+      "userName": "yewon_jung",
       "content": "여행가고 시프요.",
       "isLiked": false
     },
@@ -29,6 +29,27 @@
       "userName": "Chanho-park",
       "content": "Ummm... when I was in LA..blahblahblah",
       "isLiked": false
+    }
+  ],
+
+  "feedback": [
+    {
+      "id": "Jung yewon",
+      "content": "여행가고 시프요.",
+      "isLiked": false,
+      "image": "없음"
+    },
+    {
+      "id": "Jung yewon",
+      "content": "여행가고 시프요.",
+      "isLiked": false,
+      "image": "없음"
+    },
+    {
+      "id": "Jung yewon",
+      "content": "여행가고 시프요.",
+      "isLiked": false,
+      "image": "없음"
     }
   ]
 }
