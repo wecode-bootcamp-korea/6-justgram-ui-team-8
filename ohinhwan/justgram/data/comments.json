@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "feed": 1,
+      "userName": "justcode",
+      "content": "미장 오늘 완전 불장이네!!",
+      "isLiked": true
+    },
+    {
+      "feed": 1,
+      "userName": "tgif",
+      "content": "Can I buy that now?!!",
+      "isLiked": true
+    },
+    {
+      "feed": 2,
+      "userName": "yewon_jung",
+      "content": "여행가고 시프요.",
+      "isLiked": false
+    },
+    {
+      "feed": 3,
+      "userName": "Jieun-park",
+      "content": "Hey, I like your posts. thumbs up!",
+      "isLiked": false
+    },
+    {
+      "feed": 3,
+      "userName": "Chanho-park",
+      "content": "Ummm... when I was in LA..blahblahblah",
+      "isLiked": false
+    }
+  ],
+
+  "feedback": [
+    {
+      "id": "Jung yewon",
+      "content": "여행가고 시프요.",
+      "isLiked": false,
+      "image": "없음"
+    },
+    {
+      "id": "Jung yewon",
+      "content": "여행가고 시프요.",
+      "isLiked": false,
+      "image": "없음"
+    },
+    {
+      "id": "Jung yewon",
+      "content": "여행가고 시프요.",
+      "isLiked": false,
+      "image": "없음"
+    }
+  ]
+}
