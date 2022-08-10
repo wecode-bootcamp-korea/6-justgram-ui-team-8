@@ -1,1 +1,4 @@
-data/
+backend/database/data/
+
+API/node_modules
+API/.env
