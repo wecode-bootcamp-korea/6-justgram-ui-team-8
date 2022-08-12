@@ -14,12 +14,13 @@ const writer = 'guest1';
 let feedData;
 
 /* 데이터를 받아온 후 피드 동적 생성 */
-fetch('data/feeds.json')
+fetch('http://localhost:8000/feeds')
   .then((res) => res.json())
   .then((data) => {
-    feedData = data;
-    data.forEach((comment) => {
-      console.log(comment);
+    console.log(data);
+    console.log('typeof', typeof data);
+    data.feeds.forEach((feed) => {
+      console.log(feed);
       main.innerHTML += `<section class="feed">
       <!-- feed id container -->
       <div class="feed-id vertical-center">
@@ -28,7 +29,7 @@ fetch('data/feeds.json')
             <div class="profile-cur"></div>
           </a>
           <a href="#">
-            <span class="bold feed-id-uid">${comment.userName}</span>
+            <span class="bold feed-id-uid">${feed.user_id}</span>
           </a>
         </div>
         <a href="#">
@@ -42,7 +43,7 @@ fetch('data/feeds.json')
       <!-- feed img container -->
       <div class="feed-img-container">
         <div class="feed-img flex-center">
-          <img class="img" src="${comment.imageSrc}" alt="${comment.imgAlt}" />
+          <img class="img" src="${feed.image_url}" alt="${feed.image_alt}" />
         </div>
         <div class="feed-img-menu">
           <ul class="vertical-center">
@@ -85,14 +86,17 @@ fetch('data/feeds.json')
       </div>
       <!-- feed content container -->
       <div class="feed-cont-container">
-        <p class="bold like-count">좋아요 ${comment.likeCount}개</p>
+        <p class="bold like-count">좋아요 ${feed.like}개</p>
         <p class="feed-cont">
-          <span class="bold mr5 feed-cont-uid">${comment.userName}</span
-          ><span class="feed-cont-com">${comment.content}</span
+          <span class="bold mr5 feed-cont-uid">${feed.user_id}</span
+          ><span class="feed-cont-com">${feed.contents}</span
           ><a href="#" class="color-gray ml5">더 보기</a>
         </p>
-        <a href="#" class="color-gray feed-all-comment">댓글 ${comment.allComment}개 모두 보기</a>
-        <p class="feed-cont-time color-gray">${comment.createdTime}시간전</p>
+        <a href="#" class="color-gray feed-all-comment">댓글 ${'0'}개 모두 보기</a>
+        <p class="feed-cont-time color-gray">${feed.created_at.slice(
+          11,
+          2
+        )}시간전</p>
       </div>
       <!-- feed comment container -->
       <div class="feed-com vertical-center">
