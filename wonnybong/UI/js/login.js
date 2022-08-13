@@ -5,11 +5,9 @@ const loginBtn = document.getElementById('login-btn');
 function ableLoginBtn() {
   let idValue = uidInput.value;
   let pwValue = upwInput.value;
-  if (idValue.includes('@') && idValue.length >= 5 && pwValue.length >= 5) {
-    loginBtn.disabled = false;
-  } else {
-    loginBtn.disabled = true;
-  }
+  let isValid = idValue.includes('@') && idValue.length >= 5 && pwValue.length >= 5
+
+  loginBtn.disabled = !isValid
 }
 
 uidInput.addEventListener('input', ableLoginBtn);
